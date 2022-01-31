@@ -58,38 +58,6 @@ We can interact with the DOM by accessing the `document` object. The document ob
 
 There are many built in methods from the `document` object that we can use to access specific elements from the DOM.
 
-`.getElementById` - This method will return an element that has the a matching id to the one we pass in as an argument.
-
-```html
-<button id="myBtn">My Button</button>
-```
-
-```javascript
-const myBtn = document.getElementById(`btn`)
-```
-
-`.getElementByTagNames` - This method will return a collection of the element's child elements with a specifide tagname as a NodeList object. The NodeList object is a collection of nodes. These nodes can be accessed by index numbers starting at 0. Just like an array.
-
-> tip: you can use the `.length` property to determine how many child nodes there are
-
-> tip: the '\*' parameter value will return all child nodes
-
-```html
-<ul id="myList">
-  <li>One</li>
-  <li>Two</li>
-  <li>Three</li>
-</ul>
-```
-
-```javascript
-const list = document.getElementById('myList')
-
-const numberOfLiTags = list.getElementsByTagName('li')
-
-console.log(numberOfLiTags) //result: an HTMLcollection containing the `li` tags
-```
-
 `.querySelector` - this returns the first element in our document that matches the specified selector. Here we can use selecters to find an element just like CSS.
 
 ```html
