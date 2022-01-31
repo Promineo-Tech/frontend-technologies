@@ -1,6 +1,5 @@
 # Week 2
 
-
 ## CSS
 
 CSS, which stands for Cascading Style Sheets, is another building block language of the web. CSS is a presentational language that is used only for the _styling_ and _layout_ of a page. CSS files are files that have the `.css` extension.
@@ -18,7 +17,7 @@ There are three main ways to write CSS:
 Inline CSS Example:
 
 ```html
-<button style="color:blue;font-size:12px">Button Text</button>
+<button style="color:red;font-size:14px">Button Text</button>
 ```
 
 2. **Internal CSS** - Internal CSS is when CSS written inside of the `<style>` tag of an HTML document. This `<style>` tag should be written inside of the `<head>` tag of the html. Internal CSS can bloat a file and make it more difficult to comprehend, and is consequently not considered best-practice.
@@ -31,7 +30,7 @@ Internal CSS Example:
   <head>
     <style>
       h1 {
-        background-color: blue;
+        background-color: red;
       }
     </style>
     <title>Document</title>
@@ -42,7 +41,7 @@ Internal CSS Example:
 </html>
 ```
 
-3. **External CSS** - External CSS is when CSS is brought in via an external stylesheet separate to the HTML file, and then brought in using a `<link>` tag in the `<head>` of an HTML document. The `href` attribute of the `<link` should point to the stylesheet, and the `type` attribute should specify that the file is a stylesheet. External CSS is is considered good practice, as it enables isolation and clarity of code.
+3. **External CSS** - External CSS is when CSS is brought in via an external stylesheet separate to the HTML file, and then brought in using a `<link>` tag in the `<head>` of an HTML document. The `href` attribute of the `<link` should point to the stylesheet, and the `type` attribute should specify that the file is a stylesheet. 
 
 External CSS Example:
 
@@ -52,13 +51,11 @@ External CSS Example:
 </head>
 ```
 
-> Note: `<link>` tags can also be used to bring in other types of external resources that are not stylesheets.
-
 </details>
 
 ### Reset CSS
 
-By default, browsers apply their own set of styling rules to the elements inside of an HTML file. For example, buttons, headings, paragraphs, and other elements come by default with some margin, padding, borders, and other CSS styling. This can often lead to headaches when attempting to replicate styling across browsers. Fortunately, developers can use a `reset css` file to remove all default styling from a browser, and essentially start from scratch with total control over the styling of a page.
+By default, browsers apply their own set of styling rules to the elements inside of an HTML file. For example, buttons, headings, paragraphs, and other elements come by default with some margin, padding, borders, and other CSS styling. Developers can use a `reset css` file to remove all default styling from a browser, and essentially start from scratch with total control over the styling of a page.
 
 For a link to a premade reset css file, see here: https://meyerweb.com/eric/tools/css/reset/
 
@@ -199,7 +196,7 @@ div p {
    Example: 
  ```css
     div ~ p {
-        background-color: tomato;
+        background-color: blue;
     }
  ```
 </details>
@@ -220,7 +217,7 @@ There are a number of psuedo-class selectors, and they can be chained together. 
 
 ### CSS Specificity
 
-CSS Specificity refers to a set of rules that browsers use to determine which styles are applied when there is a conflict. The built in rules work on a point evaluation system. Each type of selector has a different point value given to it. The style that is ultimately applied comes from whichever selector has the highest point value. See below for specific point values per selector.
+CSS Specificity refers to a set of rules that browsers use to determine which styles are applied when there is a conflict. The built in rules work on a point evaluation system. Each type of selector has a different point value given to it. The style that is ultimately applied comes from whichever selector has the highest point value. 
 
 > Note: Keep in mind that CSS executes top-to-bottom, and this can affect your styling too.
 
