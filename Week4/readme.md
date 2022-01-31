@@ -506,4 +506,4 @@ elementToRemove.remove(); // Removes the div with the 'divTwo' id
 # Additional Resources
 
 - [JavaScript 30](https://javascript30.com/)
-  It’s free to sign up and gain access to these 30 Vanilla JS challenges. Each project is accompanied with a walk-through video. Good for students who want more repetition.
+- [The Vanilla JS Toolkit](https://vanillajstoolkit.com/reference/#HTML-and-Text)
