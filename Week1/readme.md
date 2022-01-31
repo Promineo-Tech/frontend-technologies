@@ -419,8 +419,6 @@ Here's a visual representation of differences between the properties:
 
 ![inline-inline-block-block](images/inline-block.png)
 
-See below for more information on the differences in each.
-
 <details>
     <summary>Inline, Inline-block, Block Information</summary>
 
