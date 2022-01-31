@@ -1,8 +1,32 @@
 # Frontend Foundations
 
+
 - <strong>Week 1:</strong> 
+  - HTML
+    - Common tags
+    - Semantic tags
+    - block vs inline vs inline-block
 - <strong>Week 2:</strong> 
+  - CSS (Cascading Style Sheets)
+    - inline vs internal vs external
+    - CSS Resets (Eric Meyer) vs Normalize CSS (Nicholas Gallagher) vs New CSS Reset (Elad Shechter)
+      - Custom CSS Resets (Josh Comeau)
+    - CSS Selectors
+    - Specificity
+    - Box Model
+    - Floats
+    - Fonts
 - <strong>Week 3:</strong> 
+  - Bootstrap
+  - Flexbox
 - <strong>Week 4:</strong> 
+  - DOM API
 - <strong>Week 5:</strong> 
+  - Asychronous vs Synchronous
+  - Callbacks vs Promises
+    - Promise.then and Promise.catch
+    - Async function
+    - await operator
+  - Fetch API
 - <strong>Week 6:</strong> 
+  - Project review
