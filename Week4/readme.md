@@ -505,18 +505,5 @@ elementToRemove.remove(); // Removes the div with the 'divTwo' id
 
 # Additional Resources
 
-- [FreeCodeCamp - JS DOM Manipulation](https://www.freecodecamp.org/news/dom-manipulation-in-vanilla-js-2036a568dcd9/)
-  A basic review/walk-through of simple DOM manipulation with Vanilla JS
 - [JavaScript 30](https://javascript30.com/)
   It’s free to sign up and gain access to these 30 Vanilla JS challenges. Each project is accompanied with a walk-through video. Good for students who want more repetition.
-- [Dev.to - JS DOM Manipulation](https://dev.to/bouhm/a-vanilla-js-guide-on-mastering-the-dom-3l9b)
-  Very thorough guide to interacting with the DOM using Vanilla JS, with references to MDN docs.
-- [Gist - JS in the DOM Cheatsheet](https://gist.github.com/thegitfather/9c9f1a927cd57df14a59c268f118ce86)
-  Great reference or ‘cheat sheet’ for basic Vanilla JS and interacting with the DOM.
-- [Medium - Event Bubbling](https://medium.com/better-programming/understanding-preventdefault-stoppropagation-and-stopimmediatepropagation-when-working-with-61842c37e012)
-  Event bubbling, preventDefault, and stopPropagation.
-
-## Videos
-
-- [Dev-Ed - JS in the DOM](https://www.youtube.com/watch?v=wiozYyXQEVk)
-  Basics of event listeners. Uses for...of loop which will be a new for loop for most students.
