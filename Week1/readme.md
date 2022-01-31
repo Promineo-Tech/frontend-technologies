@@ -4,13 +4,13 @@
 
 HTML (HyperText Markup Language) and CSS (Cascading Style Sheets) are two of the building block languages of web applications, and they are considered "front-end" technologies. HTML gives content *structure* and *meaning* by defining the "elements" that the web page is made up of. CSS is a presentational language that is used for only for the *layout* and *styling* of a webpage. JavaScript, together with HTML and CSS, is responsible for bringing our websites to life.
 
-![deadpool-HTML-CSS-JS](images/HTML-CSS-JS.gif)
+![HTML-CSS-JS](images/HTML-CSS-JS.gif)
 
 ## HTML
 
 HTML stands for Hyper Text Markup Language. HTML is used to create the infrastructure of a webpage. HTML is **NOT** a programming language; HTML is considered a "markup" language. HTML does not contain logic, and HTML elements contain very little, if any, native styling. HTML is simply used to specify the structure and basic parts of a page.
 
- Over the years, there have been many versions of HTML. As of 2014, the most up-to-date version is <a href="">HTML5</a>
+ Over the years, there have been many versions of HTML. As of 2014, the most up-to-date version is HTML5
 
 ### Set Up and Basics
 
@@ -48,7 +48,7 @@ Above is the basic syntax of an HTML element.
 
 #### Comments in HTML
 
-Comments can be written in HTML code to help clarify what's going on in the development environment. Comments will not appear in the browser, so they're not necessarily intended to be viewed by the users of a site. Comments are instead an excellent way to communicate with other developers, and even ourselves, about what's supposed to be going on in the code.
+Comments can be written in HTML code to help clarify what's going on in the development environment. Comments will not appear in the browser, so they're not necessarily intended to be viewed by the users of a site. 
 
 Comments begin with `<!--` and close with `-->`.
 
@@ -76,7 +76,7 @@ Here's an example of a basic HTML page structure:
 </html>
 ```
 
-Now, let's break down the structure seen above.
+The structure is:
 
 `<!DOCTYPE html>` - This tag is pretty unique, and it's actually not an HTML element; it's an instruction to a web browser that lets it know what version of HTML to expect.
 
@@ -90,11 +90,11 @@ Now, let's break down the structure seen above.
 
 > Fun Fact: The title determines which words are displayed on the web page tab.
 
-`<body>` - The body tag is the container for all the elements that will make up a web page. Everything inside of the body tag will be displayed on the web page. This is where developers will store elements such as divs, spans, hyperlinks, text, etc.
+`<body>` - The body tag is the container for all the elements that will make up a web page. Everything inside of the body tag will be displayed on the web page. 
 
 #### Meta Tags
 
-Meta tags are used to provide information about a site that can be used by search engines and other software. Web crawlers and search engines use the metadata contained within meta tags to evaluate, rank, and sort through websites. Good usage of metatags can help optimize a site's ranking in search results.
+Meta tags are used to provide information about a site that can be used by search engines and other software. Web crawlers and search engines use the metadata contained within meta tags to evaluate, rank, and sort through websites. 
 
 > Note: Meta tags need to be placed inside the `<head>` tag of the file.
 
@@ -108,11 +108,9 @@ Below are some example Meta Tags:
   <!-- the description tag has a content attribute that dictates the primary description of your site as it appears in search engines -->
   <meta
     name="keywords"
-    content="greatest, best, ultimate, GOAT, website, of all time"
+    content="best, ultimate, website, of all time"
   />
   <!-- keywords are used to help search engines recognize what search words can be used to point users toward a site-->
-  <meta name="author" content="matias perez-ferrero" />
-  <!-- the author tag serves to credit the creator of a website -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- a browser viewport is the area of web page in which the content is visible to the user. The width attribute can be used to set a specific width in pixels of the intended display. Here it is set to a special value (“width= device-width”) which is the width of the device in terms of CSS pixels at a scale of 100%. The initial-scale property governs the zoom level when the page is loaded for the first time. -->
 </head>
@@ -126,12 +124,12 @@ Semantic HTML is HTML that introduces context or meaning to the structure of a w
 
 Examples of nonsemantic HTML: `<div>, <span>`
 
-Examples of semantic HTML: `<footer>, <header>, <nav>, <form>, <table>, <article>, <main>, <section>`
+Examples of semantic HTML: `<footer>, <header>, <nav>, <form>, <article>, <main>, <section>`
 
 <details>
     <summary>Semantic HTML Information</summary>
 
-Notice how semantic tag names imply some significant meaning about their contents. Appropriate usage of semantic HTML can boost a site's SEO, and also enable screen reading softwares to work more effectively for people with disabilities.
+Semantic tag names imply some significant meaning about their contents. Appropriate usage of semantic HTML can boost a site's SEO, and also enable screen reading softwares to work more effectively for people with disabilities.
 
 When it comes to making your sites more accessible, here are three easy tips to follow:
 
@@ -139,7 +137,7 @@ When it comes to making your sites more accessible, here are three easy tips to 
 1. Attach labels to each of your `<input />` elements
 1. Use a `<button>` tag whenever you use an `onclick` event handler. For more reasons on why you should try to always use a button with an onclick, see here: https://blog.benmyers.dev/clickable-divs/
 
-> Note: As of Oct. 2019, the Supreme Court has cleared the way for discrimination law suits against websites that are not accessible to people with disabilities. The Supreme Court let stand a ruling that the Americans With Disabilities act requires web pages to be equally accessible as any other utility to those with disabilities. This means that creating accessible websites will be legally mandatory in the near future. In light of this, be aware that chrome has developer tools that can help audit accessibility issues, and you can also add this extension that provides more advanced features for discovering accessibility issues: https://chrome.google.com/webstore/detail/axe-web-accessibility-tes/lhdoppojpmngadmnindnejefpokejbdd?hl=en-US
+> Note: As of Oct. 2019, the Supreme Court has cleared the way for discrimination law suits against websites that are not accessible to people with disabilities.  This means that creating accessible websites will be legally mandatory in the future. The chrome browser has developer tools that can help audit accessibility issues, such as: https://chrome.google.com/webstore/detail/axe-web-accessibility-tes/lhdoppojpmngadmnindnejefpokejbdd?hl=en-US
 
 </details>
 
@@ -304,8 +302,6 @@ Input tags can have a `type` attribute applied in order to control the type of i
 
 If a `type` attribute value is not specified for an `<input>`, it will default to `type="text"`, which is just a normal input box a user can type any text into.
 
-> Note: `<input />` tags are an example of one of the more commonly used "self-closing" or "void" elements in HTML. They should _NOT_ be written in pairs.
-
 </details>
 
 <details>
@@ -373,8 +369,6 @@ An HTML form can contain one or more of the following `form elements`:
 - `<fieldset>`
 - `<label>`
 - `<output>`
-
-> Note: `<label>` tags can be used to assign a label to other elements within a form by referencing their `id` attribute. Using labels is a great practice for boosting the accessibility of your site, as screen readers can inform users which input field does what. Additionally, mouse users can click on the label to toggle the control of the corresponding input field.
 
 See the example form below:
 
@@ -456,8 +450,6 @@ Inline level elements _DO NOT_ start on a new line and will only take up as much
 1. Allow other inline or inline-block elements to sit to their left and right
 1. Cannot be assigned a width and height
 1. Respect left and right margins and padding, but _not_ vertical margins and padding
-
-> Note: Inline elements can be given vertical padding and borders of their own, but they will not push away other elements. This concept is easily confused, so check out this article for more details on inline-level elements: https://hacks.mozilla.org/2015/03/understanding-inline-box-model/
 
 Here are some common elements that are assigned `display:inline` by default:
 
