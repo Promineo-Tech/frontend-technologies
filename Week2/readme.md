@@ -238,7 +238,7 @@ CSS Specificity refers to a set of rules that browsers use to determine which st
 
 </details>
 
-You can use a <a href="">Specificity Calculator</a> to easily know the specificity of a selector.
+You can use a <a href="https://specificity.keegan.st/">Specificity Calculator</a> to easily know the specificity of a selector.
 
 ### Box Model
 
