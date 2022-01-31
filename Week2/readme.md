@@ -285,7 +285,7 @@ Example CSS:
 
 Result:
 
-![box-sizing](/images/box-sizing.png)
+![box-sizing](images/box-sizing.png)
 
 ### Floats
 
