@@ -436,45 +436,6 @@ We can prevent the form from causing a page refresh by canceling the `submit` ev
 
 Notice how the page no longer refreshes when we hit that submission button. The `.preventDefault()` method can be used for any default event and is not limited to forms, it's just most commonly used with forms.
 
-## DOM Selectors
-
-We can use some built `document` methods to grab specific elements from the DOM.
-
-`.querySelector` - this returns the first element in our document that matches the specified selector. Here we can use selecters to find an element just like CSS.
-
-```html
-<ul id="myList" class="list">
-  <li>One</li>
-  <li>Two</li>
-  <li>Three</li>
-</ul>
-```
-
-```javascript
-// element
-const myList = document.querySelector('ul')
-
-// id
-const myList = document.querySelector('#myList')
-
-// class
-const myList = document.querySelector('.myList')
-```
-
-`.querySelectorAll` - this works just like querySelector, however this will return a NodeList with all of the matching elements with the specified selector.
-
-```html
-<ul id="myList" class="list">
-  <li>One</li>
-  <li>Two</li>
-  <li>Three</li>
-</ul>
-```
-
-```javascript
-const listItems = document.querySelectorAll('li')
-```
-
 ## Node Methods
 
 `.createElement('element name')` - this method creates an element with the name that is passed in as an argument
