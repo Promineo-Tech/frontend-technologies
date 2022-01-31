@@ -10,7 +10,7 @@ HTML (HyperText Markup Language) and CSS (Cascading Style Sheets) are two of the
 
 HTML stands for Hyper Text Markup Language. HTML is used to create the infrastructure of a webpage. HTML is **NOT** a programming language; HTML is considered a "markup" language. HTML does not contain logic, and HTML elements contain very little, if any, native styling. HTML is simply used to specify the structure and basic parts of a page.
 
- Over the years, there have been many versions of HTML. As of 2014, the most up-to-date version is HTML5, which introduced a number of new features to the language. For more details, see here: https://stackoverflow.com/questions/134727/whats-the-key-difference-between-html-4-and-html-5
+ Over the years, there have been many versions of HTML. As of 2014, the most up-to-date version is <a href="">HTML5</a>
 
 ### Set Up and Basics
 
@@ -478,3 +478,4 @@ Inline-block elements are placed as inline elements (on the same line as adjacen
 HTML elements are not given `display: inline-block` by default. Inline-block can only be manually defined.
 
 </details>
+
