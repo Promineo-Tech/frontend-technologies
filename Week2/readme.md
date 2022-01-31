@@ -373,3 +373,5 @@ Mockups are essentially sketches that represent the way a web site should look. 
 Mockups can be as simple as a sketch on paper or a "wireframe", or as complicated as a high fidelity, highly detailed, and even interactive mockup built using illustrating software.
 
 > Note: For a useful tool for creating your own mockups, see https://www.figma.com/
+
+## Additional Resources

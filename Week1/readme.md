@@ -469,3 +469,4 @@ HTML elements are not given `display: inline-block` by default. Inline-block can
 
 </details>
 
+## Additional Resources
