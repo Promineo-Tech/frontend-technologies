@@ -373,3 +373,13 @@ Mockups can be as simple as a sketch on paper or a "wireframe", or as complicate
 > Note: For a useful tool for creating your own mockups, see https://www.figma.com/
 
 ## Additional Resources
+
+- [CSS Reset](https://meyerweb.com/eric/tools/css/reset/)
+- [CSS Normalize](https://necolas.github.io/normalize.css/)
+- [The New CSS Reset](https://github.com/elad2412/the-new-css-reset)
+- [Free Scrimba HTML and CSS Course](https://scrimba.com/learn/htmlcss)
+- [Colte Steele - CSS Text Properties](https://www.youtube.com/watch?v=v9Hqy5Nxthc)
+- [Colte Steele - Box Model](https://www.youtube.com/watch?v=M1xEi_BBW1I)
+- [Colte Steele - CSS Selectors](https://www.youtube.com/watch?v=qj20o5UQ3qI)
+- [Colte Steele - CSS Units](https://www.youtube.com/watch?v=fi81bovqxXI)
+- [Colte Steele - Specificity](https://www.youtube.com/watch?v=5Jpu2YrqzN0)
