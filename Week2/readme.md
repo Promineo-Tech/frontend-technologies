@@ -377,6 +377,7 @@ Mockups can be as simple as a sketch on paper or a "wireframe", or as complicate
 - [CSS Reset](https://meyerweb.com/eric/tools/css/reset/)
 - [CSS Normalize](https://necolas.github.io/normalize.css/)
 - [The New CSS Reset](https://github.com/elad2412/the-new-css-reset)
+- [Web Dev - Learn CSS Course](https://web.dev/learn/css/)
 - [Free Scrimba HTML and CSS Course](https://scrimba.com/learn/htmlcss)
 - [Colte Steele - CSS Text Properties](https://www.youtube.com/watch?v=v9Hqy5Nxthc)
 - [Colte Steele - Box Model](https://www.youtube.com/watch?v=M1xEi_BBW1I)
