@@ -53,11 +53,9 @@ External CSS Example:
 
 </details>
 
-### Reset CSS
+### Reset or Normalize CSS
 
-By default, browsers apply their own set of styling rules to the elements inside of an HTML file. For example, buttons, headings, paragraphs, and other elements come by default with some margin, padding, borders, and other CSS styling. Developers can use a `reset css` file to remove all default styling from a browser, and essentially start from scratch with total control over the styling of a page.
-
-For a link to a premade reset css file, see here: https://meyerweb.com/eric/tools/css/reset/
+By default, browsers apply their own set of styling rules to the elements inside of an HTML file. For example, buttons, headings, paragraphs, and other elements come by default with some margin, padding, borders, and other CSS styling. Developers can use a `reset css` or `normalize css` file to remove all default styling from a browser, and essentially start from scratch with total control over the styling of a page.
 
 > Note: You may also want to add `box-sizing: border-box` to your reset css in order to enable more predictable control of the height of elements.
 
