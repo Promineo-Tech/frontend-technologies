@@ -1,0 +1,25 @@
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.star {
+    font-size: 2.5em;
+    color: #ddd;
+    display: inline-block;
+}
+
+.yellow {
+    color: yellow;
+}
+
+.orange {
+    color: orange;
+}
+
+.output {
+    margin: 50px 0;
+    padding: 10px;
+    border: 1px solid #eee;
+    background-color: #ddd;
+}
