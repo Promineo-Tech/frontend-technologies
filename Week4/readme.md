@@ -505,5 +505,6 @@ elementToRemove.remove(); // Removes the div with the 'divTwo' id
 
 # Additional Resources
 
-- [JavaScript 30](https://javascript30.com/)
 - [The Vanilla JS Toolkit](https://vanillajstoolkit.com/reference/#HTML-and-Text)
+- [Web Dev Simplified - DOM Tutorial](https://www.youtube.com/watch?v=y17RuWkWdn8)
+- [DOM Traversal Cheat Sheet](assets/DOM-Traversal-Cheat-Sheet.pdf)
