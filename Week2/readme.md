@@ -374,6 +374,7 @@ Mockups can be as simple as a sketch on paper or a "wireframe", or as complicate
 
 ## Additional Resources
 
+- [CSS Cheatsheet](https://devhints.io/css)
 - [CSS Reset](https://meyerweb.com/eric/tools/css/reset/)
 - [CSS Normalize](https://necolas.github.io/normalize.css/)
 - [The New CSS Reset](https://github.com/elad2412/the-new-css-reset)
