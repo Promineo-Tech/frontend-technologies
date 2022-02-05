@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+    <link rel="stylesheet" href="css/demo.css">
+    <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <h1>madison square market</h1>
+            </div>
+            <div class="pull-right">
+    
+              <ul>
+                <li class="dropdown" id="cart">
+                  <h3>cart &#x25BE;</h3>
+                  <ul class="dropdown-menu" id="cartMenu">
+                    <li>View Cart</li>
+                    <li>Saved Carts</li>
+                  </ul>
+                </li>
+    
+                <li class="dropdown" id="account">
+                  <h3>account &#x25BE;</h3>
+                  <ul class="dropdown-menu" id="accountMenu">
+                    <li>View Account</li>
+                    <li>Check Order Status</li>
+                    <li>Sign in</li>
+                  </ul>
+                </li>
+    
+                <li class="dropdown" id="help">
+                  <h3>help &#x25BE;</h3>
+                  <ul class="dropdown-menu" id="helpMenu">
+                    <li>FAQs</li>
+                    <li>Return Policy</li>
+                    <li>Shipping Info</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="main"></div>
+      <div class="footer"></div>
+
+	<script>
+   
+        $(document).ready(() => {
+
+            // adding click event handlers
+            $('#cart').on('click', () => {
+            $('#cartMenu').show();
+            });
+
+            $('#account').on('click', () => {
+            $('#accountMenu').show();
+            });
+
+            $('#help').on('click', () => {
+            $('#helpMenu').show();
+            });
+
+            // adding mouseleave event handlers
+            $('.dropdown-menu').on('mouseleave', () => {
+            $('.dropdown-menu').hide();
+            });
+
+        });
+	</script>
+</body>
+</html>
