@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
-    <link rel="stylesheet" href="todo-list.css">
+    <link rel="stylesheet" href="css/todo-list.css">
 </head>
 <body>
     <input type="text" id="addItem">
@@ -29,7 +29,7 @@
     function build() {
       
         output.innerHTML = "<h2>Todo List</h2>";
-        
+
         const tbl = document.createElement("table");
        
         for (let i = 0; i < myList.length; i++) {

@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
-    <link rel="stylesheet" href="popup.css">
+    <link rel="stylesheet" href="css/popup.css">
 </head>
 <body>
     <div class="popup" data-message="Hello World">Click Me</div>
@@ -24,7 +24,7 @@ const popups = document.querySelectorAll(".popup");
     const popup = document.querySelector(".output");
     const popMessage = document.querySelector(".message");
     const closeButton = document.querySelector(".close");
-    
+
     closeButton.addEventListener("click", function () {
         popup.classList.add("hide");
     })
