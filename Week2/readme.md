@@ -372,6 +372,93 @@ Mockups can be as simple as a sketch on paper or a "wireframe", or as complicate
 
 > Note: For a useful tool for creating your own mockups, see https://www.figma.com/
 
+## Responsive Design
+
+Responsive design is the process of building an application's user interface (UI) to dynamically adjust based on the size of the device being used to access it.
+
+Older websites were not designed with responsive design principles in mind, and this has lead to undesirable user experiences. Take a look at https://www.spacejam.com/archive/spacejam/movie/jam.htm for an example of an unresponsive website.
+
+Nowadays, it is standard practice to ensure that websites are responsive. Some examples of responsive designs can be found here: https://www.awwwards.com/50-examples-of-responsive-web-design.html.
+
+The reason responsive design is important is because increasing numbers of users are consuming the internet via mobile devices or tablets. In 2017, there were an estimated 3.5 billion web users world wide, and around 2 billion of them exclusively use the internet on mobile devices. Nowadays, it is a requirement in any front-end developer position to be capable of designing responsive websites.
+
+When building your application, there are three main devices to develop for: **Mobile**, **tablet**, and **desktop**.
+
+![resposive design](images/responsive.jpg)
+
+### Extraction
+
+The **extraction** design process of building an application is when developers start from desktop design, and then "extract" features until the design fits smaller devices.
+
+The extraction design process often results in a desktop application that is rich with features, and a mobile application that feels like an ineffective afterthought. This is because it can be difficult to include all of the features from the desktop view when working with a mobile sized viewport. With extraction design, mobile views can be left feeling either cluttered and clunky, or less usable and effective than the desktop design.
+
+### Enhancement
+
+The **enhancement** design process is when developers begin by deciding the core features and layout for the mobile view, and then "enhance" the application in order to fill out the desktop design.
+
+This will allow you to add features into your app as you scale up with the view port size. This is also known as "mobile first" development. This process more reliably results in a robust mobile view and an equally effective desktop design.
+
+In short, it's easier to scale up than it is to scale down.
+
+### Media Queries
+
+In CSS, we can use **media queries** to help create a "responsive design".
+
+A media query is a set of CSS rules that will apply to devices based on the viewport size of the device being used to access the page.
+
+The syntax for writing a media query looks like the following:
+
+```css
+@media (max-width: 500px) {
+  /* New Styles To Apply Based On Width */
+  body {
+    background: tomato;
+  }
+}
+```
+
+Media queries are defined in CSS by using the `@media` statement. In the parentheses, we can specify the dimensions of the view port that our styles will apply to. The value passed into the parentheses can be referred to as a **break point**. Typically, break points are set with a `min-width` or `max-width` value. Inside the curly braces, we style normally.
+
+#### Other Uses
+
+Media queries can be implemented in CSS sheets themselves as seen above, as well as in the link to a specific stylesheet as seen below
+
+```HTML
+<link rel='stylesheet' media='all' href='normal.css' />
+<link rel='stylesheet' media='print' href='print.css' />
+<link rel='stylesheet' media='screen and (min-width: 701px)' href='medium.css' />
+```
+
+![break points](images/breakpoints.png)
+
+#### Min-Width
+
+Min-width is the value used to declare the minimum width of screen size that the styling block will be applied to. This means that the styles will be applied when the view port width is higher than the `min-width` value.
+
+```css
+@media (min-width: 500px) {
+  /* Styles will only be applied when view port width is 500px and above */
+  body {
+    background: orange;
+  }
+}
+```
+
+### Max-Width
+
+Max-width is the value used to declare the maximum point of screen width that the styling block would apply to. This means that the styles will be applied if the view port width is smaller than the `max-width` value.
+
+```css
+@media (max-width: 500px) {
+  /* Styles will only be applied when view port width is 500px and lower */
+  body {
+    background: orange;
+  }
+}
+```
+
+You can use `max-width` or `min-width` interchangeably, but it's best to stick with one or the other to make your code more clear.
+
 ## Additional Resources
 
 - [CSS Cheatsheet](https://devhints.io/css)
@@ -395,5 +482,7 @@ Mockups can be as simple as a sketch on paper or a "wireframe", or as complicate
 - [CSS Grid Article - Smashing Magazine](https://www.smashingmagazine.com/2020/01/understanding-css-grid-lines/)
 - [CSS Grid Cheatsheet](https://yoksel.github.io/grid-cheatsheet/)
 - [CSS Grid Game](https://cssgridgarden.com/)
-- [CSS Grid Tutorials - Wes Bose](https://cssgrid.io/)
-
+- [Web Dev - Learn Response Web Design](https://web.dev/learn/design/)
+- [Conversation with Ethan Marcotte (creator of term RWD](https://www.youtube.com/watch?v=iiLKVmxCxEU)
+- [RWD Podcast - Old episodes (but still useful)](https://responsivewebdesign.com/podcast/)
+- [Material Design - Google's Design System](https://material.io/develop/web)
