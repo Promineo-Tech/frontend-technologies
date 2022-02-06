@@ -466,6 +466,8 @@ You can use `max-width` or `min-width` interchangeably, but it's best to stick w
 - [CSS Normalize](https://necolas.github.io/normalize.css/)
 - [The New CSS Reset](https://github.com/elad2412/the-new-css-reset)
 - [Web Dev - Learn CSS Course](https://web.dev/learn/css/)
+- [CSS Diner Game](https://flukeout.github.io/)
+- [CSS Validator](https://jigsaw.w3.org/css-validator/)
 - [Free Scrimba HTML and CSS Course](https://scrimba.com/learn/htmlcss)
 - [Colte Steele - CSS Text Properties](https://www.youtube.com/watch?v=v9Hqy5Nxthc)
 - [Colte Steele - Box Model](https://www.youtube.com/watch?v=M1xEi_BBW1I)
