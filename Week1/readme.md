@@ -471,4 +471,4 @@ HTML elements are not given `display: inline-block` by default. Inline-block can
 
 ## Additional Resources
 
-- 
+- [Getting to Know HTML - Shay Howe](https://learn.shayhowe.com/html-css/getting-to-know-html/)
