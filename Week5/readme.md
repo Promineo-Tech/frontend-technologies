@@ -267,7 +267,7 @@ HTTP messages are broken up into 4 parts:
 3. empty line: space to separate the meta-data from the body of the message
 4. body: the data included in the message
 
-#### Request Messages
+### Request Messages
 
 GET tells the server what the request is trying to do - get a resource. The start-line in our example tells the server, “I want to get the resource at /,” and that / is the website’s homepage or root. GET is one of several HTTP methods that describe what a request is trying to do. 
 
@@ -277,7 +277,7 @@ Notice the operations in the second column. These are known as “CRUD operation
 
 These 4 are not the only HTTP methods, but they’re the most important ones for you to know about right now.
 
-#### Response Messages
+### Response Messages
 
  The start-line in the response says HTTP/1.1 200. The first half of this line (HTTP/1.1) tells the client that the response follows HTTP rules, version 1.1. The second half (200) is the HTTP status code, which tells us the status of our request. The 200 code in this example tells us that the request was successful. Not all requests succeed though, and the status codes can help us understand what went wrong.
 
