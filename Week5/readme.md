@@ -226,7 +226,7 @@ a certain order:
 8. Repeat steps 6 and 7 until the browser has all of the resources it needs
 
 ![IP-Config](images/ip_address.png)
-![Response-Request](images/ip_address.png)
+![Response-Request](images/request_response.png)
 ![URL](images/url.png)
 
 ## AJAX
