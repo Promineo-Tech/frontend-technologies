@@ -76,25 +76,19 @@ $('div').not('.type, .collection').parent();
  Filtering:
  - [.eq()](https://api.jquery.com/eq/#eq-index)
  - [.has()](https://api.jquery.com/has/#has-selector)
- - .map()
- - .filter()
- - .is()
- - .first()
- - last()
+ - [.map()](https://api.jquery.com/map/#map-callback)
+ - [.filter()](https://api.jquery.com/filter/#filter-selector)
+ - [.is()](https://api.jquery.com/is/#is-selector)
+ - [.first()](https://api.jquery.com/first/#first)
+ - [.last()](https://api.jquery.com/last/#last)
 
  DOM Tree Traversal
-  - .children()
-  - .closest()
-  - .find()
-  - .next()
-  - .parent()
-  - .prev()
-  - .prevAll()
-
- Miscellaneous Traversing
- - .add()
- - .end()
- - .contents()
+  - [.children()](https://api.jquery.com/children/#children-selector)
+  - [.closest()](https://api.jquery.com/closest/#closest-selector)
+  - [.find()](https://api.jquery.com/find/#find-selector)
+  - [.next()](https://api.jquery.com/next/#next-selector)
+  - [.parent()](https://api.jquery.com/parent/#parent-selector)
+  - [.prev()](https://api.jquery.com/prev/#prev-selector)
 
 ### Manipulation
 
@@ -128,13 +122,13 @@ $('abbr').attr('title', 'Hello World');
 
 Some of the attribute methods:
 
-- .addClass()
-- .attr()
-- .hasClass()
-- .removeAttr()
-- .removeClass()
-- .toggleClass()
-- .val()
+- [.addClass()](https://api.jquery.com/addClass/#addClass-className)
+- [.attr()](https://api.jquery.com/attr/#attr-attributeName)
+- [.hasClass()](https://api.jquery.com/hasClass/#hasClass-className)
+- [.removeAttr()](https://api.jquery.com/removeAttr/#removeAttr-attributeName)
+- [.removeClass()](https://api.jquery.com/removeClass/#removeClass-className)
+- [.toggleClass()](https://api.jquery.com/toggleClass/#toggleClass-className)
+- [.val()](https://api.jquery.com/val/#val)
 
 #### Style Manipulation
 
