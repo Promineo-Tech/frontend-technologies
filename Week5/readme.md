@@ -326,7 +326,7 @@ We're going to be making a simple Github repository browser using the
 
 The first thing we want to do is get a list of our public repositories. A
 little research on the [Github List Repositories API][user_repos] tells us
-we can request a user's public repositories via a `GET` request to `https://api.github.com/users/:username/repos`, so let's try it out.
+we can request a user's public repositories via a `GET` request to `https://api.github.com/users/:username/repos`.
 
 First, let's add a link to our HTML so we can trigger the request.
 
@@ -352,52 +352,13 @@ the HTTP verb we want, in this case `GET`, and the URI for the request.
 
 Now that our request is set up and ready to go, we call `send` to make it happen.
 
-Let's open `index.html` in our browser, open the inspector's `Network` tab, and
-click the link.
-
-Something happened! If we examine the request in the inspector, we should see a
-response that looks something like this:
-
-```js
-[
-  {
-    id: 18221276,
-    name: 'git-consortium',
-    full_name: 'octocat/git-consortium',
-    owner: {
-      login: 'octocat',
-      id: 583231,
-      avatar_url: 'https://avatars.githubusercontent.com/u/583231?v=3',
-      gravatar_id: '',
-      url: 'https://api.github.com/users/octocat',
-      html_url: 'https://github.com/octocat',
-      followers_url: 'https://api.github.com/users/octocat/followers',
-      following_url:
-        'https://api.github.com/users/octocat/following{/other_user}',
-      gists_url: 'https://api.github.com/users/octocat/gists{/gist_id}',
-      starred_url:
-        'https://api.github.com/users/octocat/starred{/owner}{/repo}',
-      subscriptions_url: 'https://api.github.com/users/octocat/subscriptions',
-      organizations_url: 'https://api.github.com/users/octocat/orgs',
-      repos_url: 'https://api.github.com/users/octocat/repos',
-      events_url: 'https://api.github.com/users/octocat/events{/privacy}',
-      received_events_url:
-        'https://api.github.com/users/octocat/received_events',
-      type: 'User',
-      site_admin: false
-    }
-  }
-  //... more!
-];
-```
-
 Now that we have the request part down, we need to figure out how to capture
 this response so we can do something with it.
 
 #### Handling the XHR Response
 
 The second part of XHR is handling the response once we've made the request. We
-do this by defining an event listener on the request to listen for the `load`
+do this by defining an event listener on the request to `listen` for the `load`
 event, which will tell us that the request is complete. We'll give this listener
 a _callback function_, which is a function that will get called when the
 event fires.
