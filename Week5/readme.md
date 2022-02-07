@@ -2,26 +2,316 @@
 
 ## jQuery
 
+<a href="https://jquery.com/">jQuery</a> is a JavaScript file that you include in your web pages. It lets you find elements using CSS-style selectors and then do something with the elements using jQuery methods.
 
+```
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+```
+
+### jQuery Object
+
+jQuery comes with it’s own object, the dollar sign, $, also known as jQuery. The $ object is specifically made for selecting an element and then returning that element node to perform an action on it.
+
+```
+$();
+jQuery();
+```
+
+### Selectors
+
+One of the core concepts of jQuery is to select elements and perform an action.
+
+The jQuery() function has one parameter: a CSS-style selector. This selector finds any element or CSS selector:
+
+```
+$('.feature');           // Class selector
+$('li strong');          // Descendant selector
+$('em, i');              // Multiple selector
+$('a[target="_blank"]'); // Attribute selector
+$('#product)');          // ID selector
+```
+
+#### This Selection Keyword
+
+When working inside of a jQuery function you may want to select the element in which was referenced inside of the original selector. In this event the this keyword may be used to refer to the element selected in the current handler.
+
+```
+$('div').click(function(event){ 
+  $(this);
+});
+```
+
+#### jQuery Selection Filters
+
+Should CSS selectors not be enough there are also <a href="https://api.jquery.com/category/selectors/jquery-selector-extensions/">custom filters</a> built into jQuery to help out. These filters are an extension to CSS3 and provide more control over selecting an element or its relatives.
+
+```
+$('div:has(strong)');
+```
+
+### Traversing 
+
+The general CSS selectors may not be enough and a little more detailed control is desired. jQuery provides a handful of methods for traversing up and down the DOM tree, filtering and selecting elements as necessary.
+
+In the example below the original selection finds all of the div elements in the DOM, which are then filtered using the .not() method. With this specific method all of the div elements without a class of type or collection will be selected.
+
+```
+$('div').not('.type, .collection');
+```
+
+#### Chaining
+
+Different traversing methods may be chained together simply by using a dot in-between them.
+
+The code sample below uses both the .not() method and the .parent() method. Combined together this will only select the parent elements of div elements without a class of type or collection.
+
+```
+$('div').not('.type, .collection').parent();
+```
+
+#### Traversing Methods
+
+ These methods fall into three categories, filtering, miscellaneous traversing, and DOM tree traversing. 
+
+ Filtering:
+ - .eq()
+ - .has()
+ - .map()
+ - .fitler()
+ - .is()
+ - .first()
+ - last()
+
+ DOM Tree Traversal
+  - .children()
+  - .closest()
+  - .find()
+  - .next()
+  - .parent()
+  - .prev()
+  - .prevAll()
+
+ Miscellaneous Traversing
+ - .add()
+ - .end()
+ - .contents()
+
+### Manipulation
+
+Once elements are fouind via the selecting and/or traversing methods, what do we do with them?
+
+Elements may be altered in the DOM, changing their placement, removing them, adding new elements, and so forth. Overall the options to manipulate elements are fairly vast.
+
+### Getting and Setting
+
+ Getting information revolves around using a selector in addition with a method to determine what piece of information is to be retrieved.
+
+ ```
+ // Gets the value of the alt attribute
+$('img').attr('alt');
+
+// Sets the value of the alt attribute
+$('img').attr('alt', 'Wild kangaroo');
+ ```
+
+#### Attribute Manipulation
+
+One part of elements able to be inspected and manipulated are attributes. A few options include the ability to add, remove, or change an attribute or its value. 
+
+In the examples below the .addClass() method is used to add a class to all even list items, the .removeClass() method is used to remove all classes from any paragraphs, and lastly the .attr() method is used to find the value of the title attribute of any abbr element and set it to Hello World.
+
+```
+$('li:even').addClass('even-item');
+$('p').removeClass();
+$('abbr').attr('title', 'Hello World');
+```
+
+Some of the attribute methods:
+
+- .addClass()
+- .attr()
+- .hasClass()
+- .removeAttr()
+- .removeClass()
+- .toggleClass()
+- .val()
+
+#### Style Manipulation
+
+On top of manipulating attributes, the style of an element may also be manipulated using a variety of methods. When reading or setting the height, width, or position of an element there are a handful of special methods available, and for all other style manipulations the .css() method can handle any CSS alterations.
+
+The .css() method may be used to set one property, or many, and the syntax for each varies. To set one property, the property name and value should each be in quotations and comma separated. To set multiple properties, the properties should be nested inside of curly brackets with the property name in camel case, removing any hyphens where necessary, followed by a colon and then the quoted value. Each of the property and value pairs need to be comma separated.
+
+```
+$('h1 span').css('font-size', 'normal');
+$('div').css({
+  fontSize: '13px', 
+  background: '#f60'
+});
+$('header').height(200);
+```
+
+Some of the style methods:
+
+- .css()
+- .height()
+- .offset()
+- .position()
+- .width()
+
+#### DOM Manipultion
+
+We can inspect and manipulate the DOM, changing the placement of elements, adding and removing elements, as well as flat out altering elements. The options here are deep and varied, allowing for any potential changes to be made inside the DOM.
+
+Each individual DOM manipulation method has it’s own syntax but a few of them are outlined below.
+
+```
+$('section').prepend('<h3>Featured</h3>');
+$('a[target="_blank"]').after('<em>New window.</em>');
+$('h1').text('Hello World');
+```
+
+Some of the DOM methods:
+
+- after()
+- .append()
+- .prePend
+- .before()
+- .clone()
+- .empty()
+- .html().
+- .text()
+
+### Events
+
+jQuery can easily handle event handlers, which are methods that are called only upon a specific event or action taking place. For example, the method of adding a class to an element can be set to only occur upon that element being clicked on.
+
+```
+$('li').click(function(event){
+  $(this).addClass('saved-item');
+});
+```
+
+The .click() event method, along with a handful of other event methods, is actually a shorthand method which uses the .on() method introduced. The .on() method uses automatic delegation for elements that get added to the page dynamically.
+
+Making use of the .on() method the first argument should be the native event name while the second argument should be the event handler function. 
+
+
+```
+$('li').on('click', function(event){
+  $(this).addClass('saved-item');
+});
+```
+
+### Additional Resources
+
+ - [W3Schools Tutoials](https://www.w3schools.com/jquery/default.asp)
+ - [Traversy Media Playlist](https://www.youtube.com/playlist?list=PLillGF-RfqbYJVXBgZ_nA7FTAAEpp_IAc)
+ - [Net Ninja Playlist](https://www.youtube.com/watch?v=jVe1GBCqFIE&list=PL4cUxeGkcC9hNUJ0j6ccnOAcJIPoTRpO4)
+  - [Freecodecamp's Beau Playlist](https://www.youtube.com/playlist?list=PLWKjhJtqVAbkyK9woUZUtunToLtNGoQHB)
+
+
+## Architecture of web apps: Clients and Servers
+
+When you open a web page (e.g. web app),it opens with text, a background, and a set of images. You click a button, and the page changes. The original text is replaced, new images are displayed, a modal pops up. Your browser is referred to in web development as the client (or “frontend”) – a web-accessing device or software.
+
+Servers expose resources to clients. Those resources could be HTML, CSS, JavaScript, image, video, or audio files, or data, to name but a few. Sometimes those resources are stored on the server itself; other times, the server might provide a path from a database hosted on a different server to the requesting client. The key thing to remember is that servers make it possible for clients to get the files, data, and other resources they need in order to do something valuable for an end user.
+
+Browsers aren’t the only type of client, however.  There are command line clients like curl, special purpose clients like Postman, and apps on your smartphone that request data from web servers. The important thing to remember is that a client requests resources and a server exposes resources.
+
+### Request-Response Cycle
+
+When to request a url from a web address, lots of things happen behind the scenes in
+a certain order:
+
+1. The browser parses the URL
+2. The browser sends the domain name to the ISP
+3. The ISP looks up the IP address in the DNS
+4. The ISP sends the IP address back to the browser
+5. The browser opens a connection to the server located at the IP address
+6. The browser sends a request to the server
+7. The server sends a response
+8. Repeat steps 6 and 7 until the browser has all of the resources it needs
+
+![IP-Config](images/ip_address.png)
+![Response-Request](images/ip_address.png)
+![URL](images/url.png)
 
 ## AJAX
 
-## JavaScript XHR
+Let's take a step into a time machine. The year is 2005. 🕔🚀🕤
 
-The XMLHttpRequest object, or XHR, is a JavaScript API that allows us to
-transfer data between a client and a server. This makes it possible to request
-and receive web page updates without refreshing, leading to an improved
-experience for users. In this lesson, we will be exploring the use of XHR by
-using it to access GitHub.
+Wouldn't it be nice if page refreshes didn't exist? What if we could do
+multiple things at once from a single web page? 
 
-## Objectives
+In a perfect world we could type into a search textbox and have searches performed in the background as we type. That world is here, and it's called Ajax! <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/AJAX">Asynchronous JavaScript and XML (Ajax)<a/> is a technique that is used in web applications. It provides a way to retrieve content from a server and display it without having to refresh the entire page.
 
-1.  Explain how XHR helps us write dynamic programs
-2.  Practice initializing an XHR request
-3.  Practice handling an XHR response
-4.  Understand how JavaScript fetches data from remote resources
+In the background, requests are made to a web API using JavaScript. As developers we can then choose to alter the displayed HTML based on the responses from the web API. 
 
-## XMLHttpRequest
+And the new era in the web was born called <a href="https://en.wikipedia.org/wiki/Web_2.0">Web 2.0</a>. 
+
+Typically, AJAX requests are made to web-based APIs, or application programming interfaces. In general, an API is a specification allowing two systems to communicate. 
+
+For instance, the jQuery library provides an API for DOM manipulation and traversal. A web-based API, then, is one that allows clients to get data from servers on the web. Many companies provide public web APIs that you can build on top of; for example, you can access census data via an API provided by the government, New York Times articles via their API, or you can include messaging and voice calling in an application using the Twilio API.
+
+### Twitter Infinite Scroll 
+
+After you log in, Twitter sends back an HTML file that contains an initial batch of tweets, along with references to other resources the page requires (CSS, JavaScript, and image files). By the time you're scrolling through the timeline, typically the page will have fully loaded, and the JavaScript application layer will be running. That application can detect when you're nearing the bottom of the timeline, and when it sees this happen, it makes a request to the Twitter API for more tweets to display. 
+
+The server responds with JSON data representing additional tweets. The application then inserts the data from these tweets at the bottom of the page, typically before you've reached the bottom. From the standpoint of the end user, there's an unending stream of tweets to read as they scroll down. But behind the scenes, the app is making an asynchronous request for more data and inserting that data into the DOM as it becomes available.
+
+### Anatomy of Request and Response Messages
+
+In the client-server model, web clients make requests to servers, which send back responses, which the client then consumes. These requests and responses are also referred to as HTTP messages. HTTP being a set of rules governing how clients and servers interact.
+
+These rules require request and response messages to be structured in a specific way:
+
+![HTTP-Messages](images/http_messages.png)
+
+HTTP messages are broken up into 4 parts:
+
+1. start-line: a high-level description of the message
+2. HTTP headers: details describing the message
+3. empty line: space to separate the meta-data from the body of the message
+4. body: the data included in the message
+
+#### Request Messages
+
+GET tells the server what the request is trying to do - get a resource. The start-line in our example tells the server, “I want to get the resource at /,” and that / is the website’s homepage or root. GET is one of several HTTP methods that describe what a request is trying to do. 
+
+![HTTP-Messages](images/request_types.png)
+
+Notice the operations in the second column. These are known as “CRUD operations.” When folks refer to a CRUD app, they mean one that can create, read, update, and delete resources.
+
+These 4 are not the only HTTP methods, but they’re the most important ones for you to know about right now.
+
+#### Response Messages
+
+ The start-line in the response says HTTP/1.1 200. The first half of this line (HTTP/1.1) tells the client that the response follows HTTP rules, version 1.1. The second half (200) is the HTTP status code, which tells us the status of our request. The 200 code in this example tells us that the request was successful. Not all requests succeed though, and the status codes can help us understand what went wrong.
+
+There are many different response status codes, but here are a few of the most common:
+
+- 200 OK - The request succeeded
+- 201 Created - The request succeeded and a resource was created
+- 401 Unauthorized - The request requires authentication
+- 404 Not Found - The server has not found any resource matching the request URL
+- 500 Internal Server Error - The server encountered an unexpected condition that prevented it from fulfilling the request
+
+### AJAX Dependencies
+
+AJAX relies on several technologies:
+
+- Things called Promises
+- Things called XMLHttpRequestObjects
+- A serialization format called JSON
+- Asynchronous Input / Output
+- The event loop
+
+### JavaScript XHR
+
+The <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a> object, or XHR, was the <strong>first</strong>JavaScript API to allow transfer of data between a client and a server in the browser. 
+
+### XMLHttpRequest
 
 XMLHttpRequest was named at a time when XML was all the rage, but it can be used
 with any type of data, including JSON, which is the current de facto standard.
@@ -31,12 +321,7 @@ with any type of data, including JSON, which is the current de facto standard.
 > Object Notation, we can structure this text in a way that a browser or server
 > can read as a regular JavaScript object.
 
-XHR helps us write dynamic programs by allowing us to fetch data from a server
-based on user events, and update parts of pages without requiring a full-page
-refresh. This provides users with a smooth, engaging experience that doesn't
-require them to stop what they're doing to get new information.
-
-## Using XHR to Get Data from a Server
+### Using XHR to Get Data from a Server
 
 We're going to be making a simple Github repository browser using the
 [Github API][api].
@@ -47,20 +332,11 @@ We're going to be making a simple Github repository browser using the
 > remote server. In this lesson, we're communicating with GitHub using the
 > protocols they've defined in their documentation.
 
-Code along in the provided `index.html` and `index.js` files. A basic HTML
-structure is already in place. Getting data from a server via XHR happens in two
-stages. First, we make a _request_, and then we listen for, and handle, the
-_response_.
-
 #### Creating the XHR Request
 
 The first thing we want to do is get a list of our public repositories. A
 little research on the [Github List Repositories API][user_repos] tells us
 we can request a user's public repositories via a `GET` request to `https://api.github.com/users/:username/repos`, so let's try it out.
-
-**Top-tip:** API documentation will often use a colon to precede a dynamic
-value in a RESTful URL, like `:username`. That's your hint to supply your own
-value.
 
 First, let's add a link to our HTML so we can trigger the request.
 
@@ -125,9 +401,6 @@ response that looks something like this:
 ];
 ```
 
-It worked! We successfully fetched data from a remote resource with XHR without
-reloading our page!
-
 Now that we have the request part down, we need to figure out how to capture
 this response so we can do something with it.
 
@@ -136,7 +409,7 @@ this response so we can do something with it.
 The second part of XHR is handling the response once we've made the request. We
 do this by defining an event listener on the request to listen for the `load`
 event, which will tell us that the request is complete. We'll give this listener
-a _callback function_, which is simply a function that will get called when the
+a _callback function_, which is a function that will get called when the
 event fires.
 
 ```js
@@ -182,11 +455,11 @@ Then let's start by simply listing the repository names.
 function showRepositories() {
   console.log(this.responseText);
   let repoList = '<ul>';
-  for (var i = 0; i < this.responseText.length; i++) {
-    repoList += '<li>' + this.responseText[i]['name'] + '</li>';
+  for (let i = 0; i < this.responseText.length; i++) {
+    repoList += `<li> ${this.responseText[i]['name']} </li>`;
   }
-  repoList += '</ul>';
-  document.getElementById('repositories').innerHTML = repoList;
+  repoList += `</ul>`;
+  document.querySelector('#repositories').innerHTML = repoList;
 }
 ```
 
@@ -435,19 +708,7 @@ and serves up pure data, which is the only thing our applications need.
 
 ## Ajax
 
-Wouldn't it be nice if page refreshes didn't exist? What if we could do
-multiple things at once from a single web page? In a perfect world we could
-type into a search textbox and have searches performed in the background as we
-type. That world is here, and it's called Ajax! Asynchronous JavaScript and XML
-(Ajax) is a technique that is used in web applications. It provides a way to
-retrieve content from a server and display it without having to refresh the
-entire page.
 
-Modern dynamic applications provide a better user experience by allowing users
-to manipulate data on the server and see the results without having to refresh
-the page. This is the power of Ajax in action. In the background, requests are
-made to a web API using JavaScript. As developers we can then choose to alter
-the displayed HTML based on the responses from the web API.
 
 When you've used `XMLHttpRequest` directly to query an API like GitHub to
 dynamically update your page, you've been using Ajax. With jQuery, we have a
@@ -621,18 +882,7 @@ technique. We don't have to sit around and wait for the API to give us a
 response. Instead, we tell jQuery that when it receives a response to please
 pass it along to our callbacks so they can handle it accordingly.
 
-## Resources
-
-* [Application programming interface](http://en.wikipedia.org/wiki/Application_programming_interface)
-* [jQuery.get()](http://api.jquery.com/jquery.get/)
-
-<p data-visibility='hidden'>View <a href='https://learn.co/lessons/js-ajax-callbacks-readme'>AJAX and Callbacks</a> on Learn.co and start learning to code for free.</p>
+## Additioanl Resources
 
 
-## Promises 
 
-## Fetch API
-
-## Additional Resources
-
-- [jQuery Tutorial - Shay Howe](https://learn.shayhowe.com/advanced-html-css/jquery/)
