@@ -147,11 +147,10 @@ $('header').height(200);
 
 Some of the style methods:
 
-- .css()
-- .height()
-- .offset()
-- .position()
-- .width()
+- [.css()](https://api.jquery.com/css/)
+- [.height()](https://api.jquery.com/height/#height)
+- [.position()](https://api.jquery.com/position/#position)
+- [.width()](https://api.jquery.com/width/#width)
 
 #### DOM Manipultion
 
@@ -167,14 +166,12 @@ $('h1').text('Hello World');
 
 Some of the DOM methods:
 
-- after()
-- .append()
-- .prePend
-- .before()
-- .clone()
-- .empty()
-- .html().
-- .text()
+- [.after()](https://api.jquery.com/after/#after-content-content)
+- [.append()](https://api.jquery.com/append/#append-content-content)
+- [.prepend()](https://api.jquery.com/prepend/#prepend-content-content)
+- [.empty()](https://api.jquery.com/empty/#empty)
+- [.html()](https://api.jquery.com/html/#html)
+- [.text()](https://api.jquery.com/text/#text)
 
 ### Events
 
