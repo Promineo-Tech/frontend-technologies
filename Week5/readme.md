@@ -303,8 +303,6 @@ AJAX relies on several technologies:
 
 The <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a> object, or XHR, was the <strong>first</strong> JavaScript API to allow transfer of data between a client and a server in the browser. 
 
-### XMLHttpRequest
-
 XMLHttpRequest was named at a time when XML was all the rage, but it can be used
 with any type of data, including JSON, which is the current de facto standard.
 
