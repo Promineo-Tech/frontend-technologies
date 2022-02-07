@@ -313,207 +313,22 @@ with any type of data, including JSON, which is the current de facto standard.
 
 ### Using XHR to Get Data from a Server
 
-We're going to be making a simple Github repository browser using the
-[Github API][api].
-
-> **Definition:** API stands for [Application Programming Interface][api_wiki].
-> In this course, we are working specifically with web APIs, which are sets of
-> tools or protocols that allow us to communicate with a resource hosted on a
-> remote server. In this lesson, we're communicating with GitHub using the
-> protocols they've defined in their documentation.
-
-#### Creating the XHR Request
-
-The first thing we want to do is get a list of our public repositories. A
-little research on the [Github List Repositories API][user_repos] tells us
-we can request a user's public repositories via a `GET` request to `https://api.github.com/users/:username/repos`.
-
-First, let's add a link to our HTML so we can trigger the request.
-
-```html
-<div>
-  <h3>Repositories</h3>
-  <a href="#" onclick="getRepositories()">Get Repositories</a>
-</div>
+```HTML
+  <body>
+    <div class="result"></div>
+  </body>
+```
+```JS
+let xhr = new XMLHttpRequest();
+xhr.onreadystatechange = function() {
+    if (xhr.readyState === 4){
+        document.querySelector('.result').innerHTML = xhr.responseText;
+    }
+};
+xhr.open('GET', 'https://jsonplaceholder.typicode.com/posts/1');
+xhr.send();
 ```
 
-Then let's create our `getRepositories` function and initiate our XHR request.
-
-```js
-function getRepositories() {
-  const req = new XMLHttpRequest();
-  req.open('GET', 'https://api.github.com/users/octocat/repos');
-  req.send();
-}
-```
-
-Here, we're creating a new instance of an `XMLHttpRequest`. We call `open` with
-the HTTP verb we want, in this case `GET`, and the URI for the request.
-
-Now that our request is set up and ready to go, we call `send` to make it happen.
-
-Now that we have the request part down, we need to figure out how to capture
-this response so we can do something with it.
-
-#### Handling the XHR Response
-
-The second part of XHR is handling the response once we've made the request. We
-do this by defining an event listener on the request to `listen` for the `load`
-event, which will tell us that the request is complete. We'll give this listener
-a _callback function_, which is a function that will get called when the
-event fires.
-
-```js
-function showRepositories() {
-  //this is set to the XMLHttpRequest object that fired the event
-  console.log(this.responseText);
-}
-
-function getRepositories() {
-  const req = new XMLHttpRequest();
-  req.addEventListener('load', showRepositories);
-  req.open('GET', 'https://api.github.com/users/octocat/repos');
-  req.send();
-}
-```
-
-When we add the event listener to our `req` object, we set it up so that `this`
-will be our `req` object inside our callback function. So, inside
-`showRepositories`, we can access `this.responseText` to see the full body of
-the response from our XHR request.
-
-Now that we know how to access the response, let's do something with it.
-
-#### Parsing the XHR Response
-
-Since the Github API deals strictly in JSON, we know that our response will be
-well-formed JSON, so it should be easy for us to work with.
-
-Let's parse this response and list out the repositories on the page. We'll
-start by giving ourselves a place in the DOM to put the data.
-
-```html
-<div>
-  <h3>Repositories</h3>
-  <a href="#" onclick="getRepositories()">Get Repositories</a>
-  <div id="repositories"></div>
-</div>
-```
-
-Then let's start by simply listing the repository names.
-
-```js
-function showRepositories() {
-  console.log(this.responseText);
-  let repoList = '<ul>';
-  for (let i = 0; i < this.responseText.length; i++) {
-    repoList += `<li> ${this.responseText[i]['name']} </li>`;
-  }
-  repoList += `</ul>`;
-  document.querySelector('#repositories').innerHTML = repoList;
-}
-```
-
-
-### Callbacks
-
-If we look at our last example, the Ajax request completed very quickly, but
-this won't always be the case. If we request data from a slow server over a
-slow internet connection, it might take multiple seconds to get a response.
-Using a callback allows our code to make our request and continue doing other
-things until the request completes.
-
-Ajax follows an asynchronous pattern, which makes Ajax requests *non-blocking*.
-This means we don't sit around and wait for the request to finish before
-running the rest of our code. We set callbacks and then fire and forget. When
-the request is complete, the callbacks are responsible for deciding what to do
-with the returned data.
-
-To make this concept stick, let's look at a real world example. When you put
-food into a microwave, you don't stand there and wait for the food to finish
-cooking. Okay, well, I do. Just in case.
-
-![microwave](http://i.giphy.com/xLIwD85C0z9D2.gif)
-
-But even if you stand there, you can do other things. You probably pick up your
-phone, look at Instagram, read some text messages, and, of course, work on
-[Learn](https://learn.co). Basically, you are doing other things while the
-microwave takes care of cooking your food.
-
-When the food is cooked, the microwave beeps, and you remove the food and eat
-it. This final step of removing the food and eating it is exactly how our
-callbacks work. One thing to note: as we wait for our food, we don't check if
-it's done every 5 seconds (again, I do because I'm very hungry, but I don't
-*have* to). We wait until the beep tells us it's done. Checking every 5 seconds
-is called *polling*, and it's a lot less efficient than waiting for the beep,
-which is our *callback*.
-
-## Handling Problems
-
-So far, we have been dealing with successful API requests. But things don't
-always go according to plan. What happens if the API we are using doesn't
-respond? Or if we attempt to retrieve a resource that doesn't exist?
-
-This can happen when API requests are based on user input. Let's go back to the
-GitHub API where we are retrieving commits. Imagine we want to retrieve a
-specific commit using a SHA.
-
-Postman:
-`https://api.github.com/repos/jquery/jquery/commits?sha=8f447576c918e3004ea479c278c11677920dc41a`
-> Returns success.
-
-Postman error:
-`https://api.github.com/repos/jquery/jquery/commits?sha=fake-SHA`
-> Returns a 404 not found.
-
-A good developer will make sure to handle these unexpected events gracefully
-when using Ajax. We can provide multiple callbacks when using jQuery: one to
-handle a successful response and one to handle when an error occurs.
-
-Let's add this inside our document ready function. Then, open the inspector,
-and reload the page.
-
-```javascript
-$.get("this_doesnt_exist.html", function(data) {
-  // This will not be called because the .html file request doesn't exist
-  doSomethingGood();
-}).fail(function(error) {
-  // This is called when an error occurs
-  console.log('Something went wrong: ' + error);
-});
-```
-
-We chained an additional call to `fail` on the end of our request. We passed a
-callback function to the method that will run only if an error occurs. In our
-example, we logged the error to the console, but in a real world situation you
-might want to try to fix the issue or inform the user.
-
-Note that it doesn't matter what you call `data` and `error` in the above
-examples — the only thing that matters is the order of the arguments. In the
-callback to `get()`, the first argument is going to be the data that the server
-sent back, so it makes sense to call it `data` — but we could just as well call
-it `response`. Similarly, the first argument to `fail()`'s callback is an error
-object, so we should probably give it a descriptive name like `error` (but we
-  don't have to).
-
-This is another example of how we could use jQuery to perform an Ajax request.
-
-```js
-var url = "https://api.github.com/repos/rails/rails/commits?sha=82885325e04d78fb7ec608a4670164d842d23078";
-
-$.get(url)
-  .done(function(data) {
-    console.log("Done");
-    console.log(data);
-  });
-```
-
-Note: The callback that gets passed into `.done`  gets `data` as an argument.
-`data` represents the response returned from the API. jQuery handles passing in
-that `data` object to the callbacks. This is essential to our fire and forget
-technique. We don't have to sit around and wait for the API to give us a
-response. Instead, we tell jQuery that when it receives a response to please
-pass it along to our callbacks so they can handle it accordingly.
 
 ## Additioanl Resources
 
