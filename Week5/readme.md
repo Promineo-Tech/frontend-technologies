@@ -74,10 +74,10 @@ $('div').not('.type, .collection').parent();
  These methods fall into three categories, filtering, miscellaneous traversing, and DOM tree traversing. 
 
  Filtering:
- - (.eq())[https://api.jquery.com/eq/#eq-index]
- - (.has())[https://api.jquery.com/has/#has-selector]
+ - [.eq()](https://api.jquery.com/eq/#eq-index)
+ - [.has()](https://api.jquery.com/has/#has-selector)
  - .map()
- - .fitler()
+ - .filter()
  - .is()
  - .first()
  - last()
