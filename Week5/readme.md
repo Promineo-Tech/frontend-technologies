@@ -206,6 +206,7 @@ $('li').on('click', function(event){
 ### Additional Resources
 
  - [W3Schools Tutoials](https://www.w3schools.com/jquery/default.asp)
+ - [jQuery CheatSheet](https://htmlcheatsheet.com/jquery/)
  - [Traversy Media Playlist](https://www.youtube.com/playlist?list=PLillGF-RfqbYJVXBgZ_nA7FTAAEpp_IAc)
  - [Net Ninja Playlist](https://www.youtube.com/watch?v=jVe1GBCqFIE&list=PL4cUxeGkcC9hNUJ0j6ccnOAcJIPoTRpO4)
   - [Freecodecamp's Beau Playlist](https://www.youtube.com/playlist?list=PLWKjhJtqVAbkyK9woUZUtunToLtNGoQHB)
