@@ -229,6 +229,18 @@ a certain order:
 ![Response-Request](images/request_response.png)
 ![URL](images/url.png)
 
+## Concurrent Tasks in JavaScript (faking concurrency with asynchronous)
+
+A program is “concurrent” when it manages multiple activities with overlapping timelines. Concurrent programs in Java or C++ use multiple threads of execution. When a processor has more than one core, these threads truly run in parallel. But there is a problem programmers must be careful to protect data, so that there is no corruption when a value is updated by different threads at the same time.
+
+In contrast, a JavaScript program runs in a <strong>single</strong> thread. 
+
+In particular, once a function starts, it will run to completion before any other part of your program starts running. That is good. You know that no other code will corrupt the data that your function uses. No other code will try to read any of the data until after the function returns. Inside your function, you can modify the program’s variables to your heart’s content, as long as you clean up before the function returns. You never have to worry about mut or deadlocks.
+
+The problem with having a single thread is obvious: If a program needs to wait for something to happen—most commonly, for data across the Internet—it cannot do anything else. Therefore, time-consuming operations in JavaScript are always asynchronous.
+
+You specify what you want, and provide <strong>callback functions</strong> that are invoked when data is available or when an error has occurred. The current function continues execution so that other work can be done.
+
 ## AJAX
 
 Let's take a step into a time machine. The year is 2005. 🕔🚀🕤
@@ -293,10 +305,10 @@ There are many different response status codes, but here are a few of the most c
 
 AJAX relies on several technologies:
 
-- Things called Promises
-- Things called XMLHttpRequestObjects
+- XMLHttpRequestObjects (XHR)
 - A serialization format called JSON
 - Asynchronous Input / Output
+- Promises or Callbacks
 - The event loop
 
 ### JavaScript XHR
@@ -311,7 +323,7 @@ with any type of data, including JSON, which is the current de facto standard.
 > Object Notation, we can structure this text in a way that a browser or server
 > can read as a regular JavaScript object.
 
-### Using XHR to Get Data from a Server
+### Using XHR to make an AJAX Call
 
 ```HTML
   <body>
@@ -328,6 +340,38 @@ xhr.onreadystatechange = function() {
 xhr.open('GET', 'https://jsonplaceholder.typicode.com/posts/1');
 xhr.send();
 ```
+
+In examining this code we see that the `onreadystatechange` event handler is called
+whenever the `readyState` attribute changes. The event handler requires a `callback` function to be executed whenever the `readyState` changes.
+
+This was the earliest code to perform AJAX requests. It was deprecated many, many years ago but the XMLHttpRequest API has been supported in the earliest of browsers and is still today.
+
+![CanIUse-XMLHttpRequest](images/caniuse-xmlhttprequest.png)
+
+
+
+
+![CanIUse-Fetch](images/caniuse-fetch.png)
+
+
+### Using jQuery to make an AJAX Call
+
+```HTML
+  <body>
+    <div class="result"></div>
+  </body>
+```
+```JS
+let xhr = new XMLHttpRequest();
+xhr.onreadystatechange = function() {
+    if (xhr.readyState === 4){
+        document.querySelector('.result').innerHTML = xhr.responseText;
+    }
+};
+xhr.open('GET', 'https://jsonplaceholder.typicode.com/posts/1');
+xhr.send();
+
+
 
 
 ## Additioanl Resources

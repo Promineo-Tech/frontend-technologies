@@ -384,7 +384,7 @@ The reason responsive design is important is because increasing numbers of users
 
 When building your application, there are three main devices to develop for: **Mobile**, **tablet**, and **desktop**.
 
-![resposive design](images/responsive.jpg)
+![resposive design](images/responsive.jpeg)
 
 ### Extraction
 
