@@ -485,6 +485,7 @@ You can use `max-width` or `min-width` interchangeably, but it's best to stick w
 - [CSS Grid Video Tutorials - Wes Bos](https://www.youtube.com/playlist?list=PLu8EoSxDXHP5CIFvt9-ze3IngcdAc2xKG)
 - [CSS Grid Cheatsheet](https://yoksel.github.io/grid-cheatsheet/)
 - [CSS Grid Game](https://cssgridgarden.com/)
+- [CSS Grid vs Flexbox](https://www.youtube.com/watch?v=18VLSXfsj94&t=4s)
 - [Web Dev - Learn Response Web Design](https://web.dev/learn/design/)
 - [Conversation with Ethan Marcotte (creator of term RWD)](https://www.youtube.com/watch?v=iiLKVmxCxEU)
 - [RWD Podcast - Old episodes (but still useful)](https://responsivewebdesign.com/podcast/)
