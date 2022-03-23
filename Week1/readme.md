@@ -472,3 +472,7 @@ HTML elements are not given `display: inline-block` by default. Inline-block can
 ## Additional Resources
 
 - [Getting to Know HTML - Shay Howe](https://learn.shayhowe.com/html-css/getting-to-know-html/)
+- [HTML Element Reference - W3Schools](https://www.w3schools.com/TAgs/default.asp)
+- [HTML Element Tutorial - Freecodecamp](https://www.freecodecamp.org/news/html-cheat-sheet-html-elements-list-reference/)
+- [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Learn/HTML)
+- [HTML Crash Course - Mosh](https://www.youtube.com/watch?v=qz0aGYrrlhU)
