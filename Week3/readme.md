@@ -42,7 +42,7 @@ Components are the building blocks taken from the Bootstrap library, and they pr
   - Jumbotron
   - Messages
 
-Detailed information and example code can be found on the <a href=https://getbootstrap.com/docs/5.1/components/">compoments</a> section of the documentation.
+Detailed information and example code can be found on the <a href="https://getbootstrap.com/docs/5.1/components/">compoments</a> section of the documentation.
 
 ## Using NPM 
 
@@ -99,12 +99,12 @@ So to use Bootstrap in your HTML file, you just need to reference the distribute
 
 ## Additional Resources 
 
-Npm:
+Npm:<br/>
 - [All about package.json](https://heynode.com/tutorial/what-packagejson/)
 - [What is a NPM Script?](https://heynode.com/tutorial/what-are-npm-scripts/)
 - [What is package-lock.json file?](https://heynode.com/tutorial/what-package-lockjson/)
 - [Creating a .gitignore file](https://www.freecodecamp.org/news/gitignore-what-is-it-and-how-to-add-to-repo/)
-Bootstrap:
+Bootstrap:<br/>
 - [Travery Media Bootstrap 5 Crash Course](https://www.youtube.com/watch?v=4sosXZsdy-s)
 - [W3Schools Bootstrap Reference](https://www.w3schools.com/bootstrap5/)
 - [Bootstrap Cheatsheet](https://devhints.io/bootstrap)
