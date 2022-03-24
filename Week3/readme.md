@@ -100,18 +100,18 @@ So to use Bootstrap in your HTML file, you just need to reference the distribute
 ## Additional Resources 
 
 1. Npm:
-- [All about package.json](https://heynode.com/tutorial/what-packagejson/)
-- [What is a NPM Script?](https://heynode.com/tutorial/what-are-npm-scripts/)
-- [What is package-lock.json file?](https://heynode.com/tutorial/what-package-lockjson/)
-- [Creating a .gitignore file](https://www.freecodecamp.org/news/gitignore-what-is-it-and-how-to-add-to-repo/)
+   - [All about package.json](https://heynode.com/tutorial/what-packagejson/)
+   - [What is a NPM Script?](https://heynode.com/tutorial/what-are-npm-scripts/)
+   - [What is package-lock.json file?](https://heynode.com/tutorial/what-package-lockjson/)
+   - [Creating a .gitignore file](https://www.freecodecamp.org/news/gitignore-what-is-it-and-how-to-add-to-repo/)
 2. Bootstrap:
-- [Travery Media Bootstrap 5 Crash Course](https://www.youtube.com/watch?v=4sosXZsdy-s)
-- [W3Schools Bootstrap Reference](https://www.w3schools.com/bootstrap5/)
-- [Bootstrap Cheatsheet](https://devhints.io/bootstrap)
-- Alternatives CSS frameworks 
-  - [Foundation](https://get.foundation/)
-  - [W3.css](https://www.w3schools.com/w3css/defaulT.asp)
-  - [Bulma](https://bulma.io/)
-  - [Pure.css](https://purecss.io/)
- - Other CSS libraries
-   - [Tailwindcss](https://tailwindcss.com/)
+   - [Travery Media Bootstrap 5 Crash Course](https://www.youtube.com/watch?v=4sosXZsdy-s)
+   - [W3Schools Bootstrap Reference](https://www.w3schools.com/bootstrap5/)
+   - [Bootstrap Cheatsheet](https://devhints.io/bootstrap)
+   - Alternatives CSS frameworks 
+     - [Foundation](https://get.foundation/)
+     - [W3.css](https://www.w3schools.com/w3css/defaulT.asp)
+     - [Bulma](https://bulma.io/)
+     - [Pure.css](https://purecss.io/)
+   - Other CSS libraries
+     - [Tailwindcss](https://tailwindcss.com/)
