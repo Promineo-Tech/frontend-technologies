@@ -3,7 +3,7 @@
   box-sizing: 0;
   margin: 0;
   padding: 0;
-  cursor: url("cursors-edge.png"), auto;
+  cursor: url("images/cursors-edge.png"), auto;
 }
 
 body {
@@ -35,7 +35,7 @@ div > * {
 }
 
 aside {
-  background-image: url("right-edges.png");
+  background-image: url("images/right-edges.png");
   background-position: top right;
   background-repeat: no-repeat;
   background-size: 25px 100%;
@@ -71,7 +71,7 @@ main button {
   padding: 1rem 2.5rem;
   transform: skew(-5deg);
   transition: all 0.1s ease;
-  cursor: url("cursors-eye.png"), auto;
+  cursor: url("images/cursors-eye.png"), auto;
 }
 main button:hover {
   background-color: #c5dc50;
