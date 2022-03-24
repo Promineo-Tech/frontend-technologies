@@ -99,12 +99,12 @@ So to use Bootstrap in your HTML file, you just need to reference the distribute
 
 ## Additional Resources 
 
-Npm:<br/>
+1. Npm:
 - [All about package.json](https://heynode.com/tutorial/what-packagejson/)
 - [What is a NPM Script?](https://heynode.com/tutorial/what-are-npm-scripts/)
 - [What is package-lock.json file?](https://heynode.com/tutorial/what-package-lockjson/)
 - [Creating a .gitignore file](https://www.freecodecamp.org/news/gitignore-what-is-it-and-how-to-add-to-repo/)
-Bootstrap:<br/>
+2. Bootstrap:
 - [Travery Media Bootstrap 5 Crash Course](https://www.youtube.com/watch?v=4sosXZsdy-s)
 - [W3Schools Bootstrap Reference](https://www.w3schools.com/bootstrap5/)
 - [Bootstrap Cheatsheet](https://devhints.io/bootstrap)
