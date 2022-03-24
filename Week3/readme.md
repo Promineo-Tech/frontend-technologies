@@ -106,6 +106,7 @@ So to use Bootstrap in your HTML file, you just need to reference the distribute
    - [Creating a .gitignore file](https://www.freecodecamp.org/news/gitignore-what-is-it-and-how-to-add-to-repo/)
 2. Bootstrap:
    - [Travery Media Bootstrap 5 Crash Course](https://www.youtube.com/watch?v=4sosXZsdy-s)
+   - [Bootstrap 5 Crash Course - The Net Ninja](https://www.youtube.com/playlist?list=PL4cUxeGkcC9joIM91nLzd_qaH_AimmdAR)
    - [W3Schools Bootstrap Reference](https://www.w3schools.com/bootstrap5/)
    - [Bootstrap Cheatsheet](https://devhints.io/bootstrap)
    - Alternatives CSS frameworks 
