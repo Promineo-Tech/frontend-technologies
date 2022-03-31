@@ -58,7 +58,7 @@ Now that we can add a todo item, we need to be able to remove them as well. In t
 
 <details>
 <summary>
-<code>/index.js</code>
+<code>/app.js</code>
 </summary>
 
 ```js
