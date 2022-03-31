@@ -1,6 +1,6 @@
 # Project Summary
 
-In this project, we'll practice more vanilla JS DOM manipulation by creating a simple To Do List project. The basic HTML and CSS have been provided for you, and you will be adding in the Javascript to make the interface interactive.
+Will create a simple To Do List project. The basic HTML and CSS have been provided for you, and you will be adding in the Javascript to make the interface interactive.
 
 ### Step 1
 
@@ -10,7 +10,7 @@ In this step, we'll start creating our Javascript function for adding a todo ite
 
 #### Instructions
 
-- In `index.js`, create a new function called `addTodo` that takes in an `event` as a parameter.
+- In `app.js`, create a new function called `addTodo` that takes in an `event` as a parameter.
 - Use `document.createElement` to create a new `li` element that will hold our new todo item.
 - We need to get the value of our input field to add it to our list. Use `getElementById` to get the `value` property of the input.
 - Set the `innerText` property of our recently created `li` element to the `value` of the input we just found.
@@ -22,7 +22,7 @@ In this step, we'll start creating our Javascript function for adding a todo ite
 
 <details>
 <summary>
-<code>/index.js</code>
+<code>/app.js</code>
 </summary>
 
 ```js
@@ -93,7 +93,7 @@ Now that we can add and remove items from our to do list, we can finish our app 
 
 #### Instructions
 
-- In `index.js`, create a new function called `completeTodo` that takes in an `event` as a parameter.
+- In `app.js`, create a new function called `completeTodo` that takes in an `event` as a parameter.
   - Later, we will need to add this as an event handler for every list element.
 - Use `event.target.getAttribute` to get the current value of the `aria-checked` attribute for the element that was clicked.
 - If that value is not currently `'true'`, use `setAttribute` to change its value to `'true'`. Otherwise, use `setAttribute` to change its value to `'false'`.
@@ -103,7 +103,7 @@ Now that we can add and remove items from our to do list, we can finish our app 
 
 <details>
 <summary>
-<code>/index.js</code></summary>
+<code>/app.js</code></summary>
 
 ```js
 document.querySelector("form").addEventListener("submit", addTodo);
