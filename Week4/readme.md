@@ -472,3 +472,4 @@ elementToRemove.remove(); // Removes the div with the 'divTwo' id
 - [Creating Nodes](https://www.youtube.com/watch?v=RQ40ZilvCOg)
 - [DOM Event Listeners](https://www.youtube.com/watch?v=XF1_MlZ5l6M)
 - [DOM Traversal Cheat Sheet](assets/CheatSheet.pdf)
+- [Udacity Free DOM Course](https://classroom.udacity.com/courses/ud117/)
