@@ -10,7 +10,7 @@
     <script>
         let counter = 0;
         document.addEventListener("DOMContentLoaded", function (event) {
-            
+
             const body = document.querySelector("body");
             let output = document.createElement("div");
             output.innerHTML = "click the button";
@@ -29,7 +29,6 @@
             btn.style.backgroundColor = "red";
             btn.style.color = "white";
             btn.addEventListener("click", function () {
-                console.log("clicked");
                 counter++;
                 let mes = "You clicked this <b>" + counter + "</b> times";
                 document.querySelector(".message").innerHTML = mes;
