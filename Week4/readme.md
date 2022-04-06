@@ -4,7 +4,7 @@
 
 DOM is the acronym we use for `Document Object Model`. The DOM is an object representation or blueprint for our web pages structure and content. We can interact with the DOM to manipulate our web page to change how our HTML elements are being displayed, how they are interacted with, change content, etc.
 
-It's easy to think of the DOM as a tree. Each element that exists on the DOM is known as a `node`. We can target these nodes with Javascript to create functionality within our page.
+It's easy to think of the DOM <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_object_model/Using_the_W3C_DOM_Level_1_Core">as a tree</a>. Each element that exists on the DOM is known as a `node`. We can target these nodes with Javascript to create functionality within our page.
 
 ![DOM TREE](images/domtree.png)
 
@@ -464,7 +464,8 @@ elementToRemove.remove(); // Removes the div with the 'divTwo' id
 # Additional Resources
 
 - [MDN DOM Reference](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model)
-- [Common DOM methods](https://vanillajstoolkit.com/reference/#HTML-and-Text)
+- [MDN - querySelector method](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector)
+- [MDN - Node Reference](https://developer.mozilla.org/en-US/docs/Web/API/Node)
 - [DOM Overview](https://www.youtube.com/watch?v=l-0nPnSvbX8)
 - [Finding Nodes](https://www.youtube.com/watch?v=on9p11gv1k4&t=163s)
 - [DOM Traversal](https://www.youtube.com/watch?v=8LWQNnVAMh4)
