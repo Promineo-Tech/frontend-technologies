@@ -1,47 +1,5 @@
 # Week 4
 
-## Displaying Information
-
-In javascript there are a couple built in functions that we can use to display information to us while in the development process.
-
-### Console Log
-
-`console.log()` - This is the function we can use to log data to our dev console to help make developing a little easier to see exactly what data we have.
-
-```javascript
-const myName = 'Tom'
-
-console.log(myName) // result: 'Tom'
-```
-
-### Alert
-
-`alert()` - This is the function we can use in web browsers to display a popup message or an alert to the user
-
-```javascript
-const myName = 'Tom'
-
-alert(myName) // result: a popup message in the browser would appear displaying the string of 'Tom'
-```
-
-### Console Dir
-
-`console.dir()` - this will display an interactive list of the properties from the specified object.
-
-```javascript
-console.dir(window) // result: a list of window props and values
-```
-
-## Window Object
-
-The `window object` is the object that represents an open window in the browser. We can use this object to interact with our browser window and get any data from it that we need or any make any changes that we need. The `window object` is the global object that our code will live in, inside a broswer environment.
-
-We can access the object by referencing `window`.
-
-```javascript
-console.log(window) // result: logs the window object
-```
-
 ## DOM
 
 DOM is the acronym we use for `Document Object Model`. The DOM is an object representation or blueprint for our web pages structure and content. We can interact with the DOM to manipulate our web page to change how our HTML elements are being displayed, how they are interacted with, change content, etc.
