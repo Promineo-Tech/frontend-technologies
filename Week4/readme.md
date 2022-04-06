@@ -463,7 +463,7 @@ elementToRemove.remove(); // Removes the div with the 'divTwo' id
 
 # Additional Resources
 
-- [MDN DOM Reference](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model)
+- [MDN - DOM Reference](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model)
 - [MDN - querySelector method](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector)
 - [MDN - Node Reference](https://developer.mozilla.org/en-US/docs/Web/API/Node)
 - [DOM Overview](https://www.youtube.com/watch?v=l-0nPnSvbX8)
