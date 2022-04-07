@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="styles.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <header class="banner">
+      <h1>National Parks</h1>
+    </header>
+      <div class="inputForm">
+      <h2>Add a new park</h2>
+      <form action="" id="parkForm">
+        <label for="parkName">Name</label>
+        <input
+          type="text"
+          name="parkName"
+          id="parkName"
+          title="Park name"
+          placeholder="Name of park"
+        />
+        <div class="error" id="nameError">Please enter a name</div>
+        <label for="parkLocation">Location</label>
+        <input
+          type="text"
+          name="parkLocation"
+          id="parkLocation"
+          title="Park location"
+          placeholder="State, United States"
+        />
+        <div class="error" id="locationError">Please enter a location</div>
+        <label for="parkDescription">Description</label>
+        <textarea name="parkDescription" id="parkDescription"></textarea>
+        <div class="error" id="descriptionError">
+          Please enter a short description
+        </div>
+        <label for="established">Established</label>
+        <input
+          type="text"
+          name="parkEstablished"
+          id="established"
+          title="Established"
+          placeholder="July 4, 1776"
+        />
+        <div class="error" id="establishedError">Please enter a date</div>
+        <label for="area">Area</label>
+        <input
+          type="text"
+          name="parkArea"
+          id="area"
+          title="Area"
+          placeholder="1 acre"
+        />
+        <div class="error" id="areaError">Please enter the area</div>
+        <label for="rating">Rating</label>
+        <input
+          type="number"
+          min="1"
+          max="5"
+          name="parkRating"
+          id="rating"
+          title="rating"
+          placeholder="4.9"
+        />
+        <div class="error" id="ratingError">
+          Please enter the rating between 1 and 5 inclusive.
+        </div>
+        <div class="formControl">
+          <button type="submit" id="addBtn">Add</button>
+        </div>
+      </form>
+    </div>
+    <main>
+      <section class="park">
+        <h2>Biscayne National Park</h2>
+        <div class="location">Florida, United States</div>
+        <div class="description">
+          Biscayne National Park encompasses coral reefs, islands and shoreline
+          mangrove forest in the northern Florida Keys. Its reefs and islands
+          are accessible only by boat. Dolphins, turtles and pelicans live in
+          Biscayne Bay Lagoon. The underwater Maritime Heritage Trail links dive
+          sites, most of them shipwrecks. On Boca Chita Key, Boca Chita
+          Lighthouse has coastal views. A museum at Convoy Point explains local
+          ecosystems.
+        </div>
+        <button class="rateBtn" title="Add to Favourites">&#9734;</button>
+        <div class="stats">
+          <div class="established stat">
+            <h3>Established</h3>
+            <div class="value">
+              June 28, 1980
+            </div>
+          </div>
+          <div class="area stat">
+            <h3>Area</h3>
+            <div class="value">
+              172,971 acres (699.99 km<sup>2</sup>)
+            </div>
+          </div>
+          <div class="rating stat">
+            <h3>Rating</h3>
+            <div class="value">
+              4.7
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="park">
+        <h2>Grand Canyon National Park</h2>
+        <div class="location">Arizona, United States</div>
+        <div class="description">
+          Grand Canyon National Park, in Arizona, is home to much of the immense
+          Grand Canyon, with its layered bands of red rock revealing millions of
+          years of geological history. Viewpoints include Mather Point, Yavapai
+          Observation Station and architect Mary Colter’s Lookout Studio and her
+          Desert View Watchtower. Lipan Point, with wide views of the canyon and
+          Colorado River, is a popular, especially at sunrise and sunset.
+        </div>
+        <button class="rateBtn" title="Add to Favourites">&#9734;</button>
+        <div class="stats">
+          <div class="established stat">
+            <h3>Established</h3>
+            <div class="value">
+              February 26, 1919
+            </div>
+          </div>
+          <div class="area stat">
+            <h3>Area</h3>
+            <div class="value">4,926 km<sup>2</sup></div>
+          </div>
+          <div class="rating stat">
+            <h3>Rating</h3>
+            <div class="value">
+              4.8
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="park">
+        <h2>Gateway Arch National Park</h2>
+        <div class="location">Missouri, United States</div>
+        <div class="description">
+          Gateway Arch National Park, formerly known as the Jefferson National
+          Expansion Memorial until 2018, is an American national park located in
+          St. Louis, Missouri, near the starting point of the Lewis and Clark
+          Expedition.
+        </div>
+        <button class="rateBtn" title="Add to Favourites">&#9734;</button>
+        <div class="stats">
+          <div class="established stat">
+            <h3>Established</h3>
+            <div class="value">
+              February 22, 2018
+            </div>
+          </div>
+          <div class="area stat">
+            <h3>Area</h3>
+            <div class="value">37 ha</div>
+          </div>
+          <div class="rating stat">
+            <h3>Rating</h3>
+            <div class="value">
+              4.4
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="park">
+        <h2>Indiana Dunes National Park</h2>
+        <div class="location">Indiana, United States</div>
+        <div class="description">
+          Indiana Dunes National Park is a United States National Park located
+          in Northwestern Indiana, managed by the National Park Service. It was
+          authorized by Congress in 1966 as the Indiana Dunes National
+          Lakeshore, the name by which it was known until it was designated the
+          nation's 61st national park on February 15, 2019.
+        </div>
+        <button class="rateBtn" title="Add to Favourites">&#9734;</button>
+        <div class="stats">
+          <div class="established stat">
+            <h3>Established</h3>
+            <div class="value">
+              February 15, 2019
+            </div>
+          </div>
+          <div class="area stat">
+            <h3>Area</h3>
+            <div class="value">60.97 km<sup>2</sup></div>
+          </div>
+          <div class="rating stat">
+            <h3>Rating</h3>
+            <div class="value">
+              4.3
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
