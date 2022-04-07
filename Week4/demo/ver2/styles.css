@@ -1,0 +1,181 @@
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+  }
+  
+  body {
+    margin: 0;
+  }
+  
+  #app {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  header {
+    color: #eee;
+  }
+  
+  .regal {
+    background: purple;
+  }
+  
+  .elegant {
+    background: #222;
+  }
+  
+  header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 12px;
+  }
+  
+  header nav ul {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  header nav a {
+    text-decoration: none;
+    color: #eee;
+    background: #a33;
+    font-size: 1.4rem;
+    padding: 4px 8px;
+    margin-left: 12px;
+    display: block;
+  }
+  
+  header #company-name {
+    font-size: 2rem;
+  }
+  
+  
+  main {
+    color: #222;
+    background: #ddd;
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    overflow-y: scroll;
+  }
+  
+  main article {
+    margin: 0 180px 0 12px;
+    max-width: 960px;
+  }
+  
+  main aside {
+    min-width: 140px;
+    position: fixed;
+    right: 12px;
+  }
+  
+  aside nav {
+    background: #999;
+    border-radius: 2px;
+    padding: 12px;
+    margin: 12px;
+    box-shadow: 0 2px 4px -3px black;
+  }
+  
+  section p {
+    margin: 0 0 12px;
+  }
+  
+  section p:last-child {
+    margin-bottom: 0;
+  }
+  
+  section {
+    padding: 12px 0;
+    border-bottom: 1px solid black;
+  }
+  
+  section:last-child {
+    border-bottom: none;
+  }
+  
+  aside li {
+    background: #bbb;
+    border-radius: 2px;
+    box-shadow: 0 2px 4px -3px black;
+  }
+  
+  aside li:not(:last-child) {
+    margin-bottom: 12px;
+  }
+  
+  aside a {
+    text-decoration: none;
+    color: darkgreen;
+    display: block;
+    padding: 4px 8px;
+    text-align: center;
+  }
+  
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  footer {
+    background: #eee;
+    display: flex;
+    justify-content: center;
+    padding: 12px 0;
+  }
+  
+  footer li:not(:last-child) {
+    margin-bottom: 12px;
+  }
+  
+  footer a {
+    color: maroon;
+    display: block;
+    padding: 4px 8px;
+    text-align: center;
+  }
+  
+  footer nav {
+    padding: 0 24px;
+  }
+  
+  .vert.grey {
+    background-color: #555;
+    color: #eee;
+  }
+  
+  .underline {
+    text-decoration: underline;
+  }
+  
+  .no-underline {
+    text-decoration: none;
+  }
+  
+  .sales-information {
+    table-layout: fixed;
+    width: 640px;
+    margin: 12px 0;
+  }
+  
+  .sales-information thead {
+    background: #bfb;
+  }
+  
+  .sales-information tbody td {
+    text-align: center;
+  }
+  
+  .sales-information tbody tr:nth-child(odd) {
+    background: #bbf;
+  }
+  
+  .sales-information tbody tr:nth-child(even) {
+    background: #fbb;
+  }
+  
