@@ -205,11 +205,11 @@ $('li').on('click', function(event){
 
 ## Architecture of web apps: Clients and Servers
 
-When you open a web page (e.g. web app),it opens with text, a background, and a set of images. You click a button, and the page changes. The original text is replaced, new images are displayed, a modal pops up. Your browser is referred to in web development as the client (or “frontend”) – a web-accessing device or software.
+When you open a web page or app, it opens with text, a background, and a set of images. You click a button, and the page changes. The original text is replaced, new images are displayed. Your browser is referred to in web development as the client (or “frontend”) – a web-accessing device or software.
 
-Servers expose resources to clients. Those resources could be HTML, CSS, JavaScript, image, video, or audio files, or data, to name but a few. Sometimes those resources are stored on the server itself; other times, the server might provide a path from a database hosted on a different server to the requesting client. The key thing to remember is that servers make it possible for clients to get the files, data, and other resources they need in order to do something valuable for an end user.
+Servers expose resources to clients. Those resources could be HTML, CSS, JavaScript, images or data, etc. Sometimes those resources are stored on the server itself; other times, the server might provide a path from a database hosted on a different server to the requesting client. Servers make it possible for clients to get the data and other resources they need in order to do something valuable for an end user.
 
-Browsers aren’t the only type of client, however.  There are command line clients like curl, special purpose clients like Postman, and apps on your smartphone that request data from web servers. The important thing to remember is that a client requests resources and a server exposes resources.
+Browsers aren’t the only type of client, however.  There are command line clients like curl, special purpose clients like Postman, and apps on your smartphone that request data from web servers. 
 
 ### Request-Response Cycle
 
