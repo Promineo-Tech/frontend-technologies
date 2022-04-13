@@ -256,9 +256,7 @@ And the new era in the web was born called <a href="https://en.wikipedia.org/wik
 
 <strong>Note:</strong> The term AJAX was coined by <a href="images/ajax.pdf">Jesse James Garrett</a> back in 2005 when he founded the design firm Adaptive Path (aquired by Capital One in 2014).
 
-Typically, AJAX requests are made to web-based APIs, or application programming interfaces. In general, an API is a specification allowing two systems to communicate. 
-
-For instance, the jQuery library provides an API for DOM manipulation and traversal. A web-based API, then, is one that allows clients to get data from servers on the web. Many companies provide public web APIs that you can build on top of; for example, you can access census data via an API provided by the government, New York Times articles via their API, or you can include messaging and voice calling in an application using the Twilio API.
+Typically, AJAX requests are made to web-based APIs, or application programming interfaces. In general, an API is a specification allowing two systems to communicate. In the context of the web, it is a bunch of functions that perform CRUD operations to data (retuirn JSON).
 
 ### Twitter Infinite Scroll 
 
