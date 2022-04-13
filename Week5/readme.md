@@ -254,9 +254,9 @@ In the background, requests are made to a web API using JavaScript. As developer
 
 And the new era in the web was born called <a href="https://en.wikipedia.org/wiki/Web_2.0">Web 2.0</a>.  
 
-<strong>Note:</strong> The term AJAX was coined by <a href="images/ajax.pdf">Jesse James Garrett</a> back in 2005 when he founded the design firm Adaptive Path (aquired by Capital One in 2014).
-
 Typically, AJAX requests are made to web-based APIs, or application programming interfaces. In general, an API is a specification allowing two systems to communicate. In the context of the web, it is a bunch of functions that perform CRUD operations to data (retuirn JSON).
+
+<strong>Note:</strong> The term AJAX was coined by <a href="images/ajax.pdf">Jesse James Garrett</a> back in 2005 when he founded the design firm Adaptive Path (aquired by Capital One in 2014).
 
 ### Twitter Infinite Scroll 
 
