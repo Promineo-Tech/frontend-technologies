@@ -252,7 +252,9 @@ In a perfect world we could type into a search textbox and have searches perform
 
 In the background, requests are made to a web API using JavaScript. As developers we can then choose to alter the displayed HTML based on the responses from the web API. 
 
-And the new era in the web was born called <a href="https://en.wikipedia.org/wiki/Web_2.0">Web 2.0</a>. 
+And the new era in the web was born called <a href="https://en.wikipedia.org/wiki/Web_2.0">Web 2.0</a>.  
+
+<strong>Note:</strong> The term AJAX was coined by <a href="images/ajax.pdf">Jesse James Garrett</a> back in 2005 when he founded the design firm Adaptive Path (aquired by Capital One in 2014).
 
 Typically, AJAX requests are made to web-based APIs, or application programming interfaces. In general, an API is a specification allowing two systems to communicate. 
 
@@ -346,27 +348,11 @@ whenever the `readyState` attribute changes. The event handler requires a `callb
 
 This was the earliest code to perform AJAX requests. It was deprecated many, many years ago but the XMLHttpRequest API has been supported in the earliest of browsers and is still today.
 
-![CanIUse-XMLHttpRequest](images/caniuse-xmlhttprequest.png)
-
-![CanIUse-Fetch](images/caniuse-fetch.png)
-
+<strong>Note:</strong>:  <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest">Synchronous XHR</a> is in deprecation state. The recommendation is that developers move away from the synchronous API and instead 
 
 ### Using jQuery to make an AJAX Call
 
-```HTML
-  <body>
-    <div class="result"></div>
-  </body>
-```
-```JS
-let xhr = new XMLHttpRequest();
-xhr.onreadystatechange = function() {
-    if (xhr.readyState === 4){
-        document.querySelector('.result').innerHTML = xhr.responseText;
-    }
-};
-xhr.open('GET', 'https://jsonplaceholder.typicode.com/posts/1');
-xhr.send();
+The jQuery ajax() method provides core functionality of Ajax in jQuery. It sends asynchronous HTTP requests to the server. The jQuery method abstracts over ``` XMLHttpRequest``` making it easier to use.
 
 
 
