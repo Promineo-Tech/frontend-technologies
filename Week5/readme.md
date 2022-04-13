@@ -196,7 +196,7 @@ $('li').on('click', function(event){
 
 ### Additional Resources
 
- - [W3Schools Tutoials](https://www.w3schools.com/jquery/default.asp)
+ - [W3Schools Tutorials](https://www.w3schools.com/jquery/default.asp)
  - [jQuery CheatSheet](https://htmlcheatsheet.com/jquery/)
  - [Traversy Media Playlist](https://www.youtube.com/playlist?list=PLillGF-RfqbYJVXBgZ_nA7FTAAEpp_IAc)
  - [Net Ninja Playlist](https://www.youtube.com/watch?v=jVe1GBCqFIE&list=PL4cUxeGkcC9hNUJ0j6ccnOAcJIPoTRpO4)
@@ -348,9 +348,6 @@ This was the earliest code to perform AJAX requests. It was deprecated many, man
 
 ![CanIUse-XMLHttpRequest](images/caniuse-xmlhttprequest.png)
 
-
-
-
 ![CanIUse-Fetch](images/caniuse-fetch.png)
 
 
@@ -374,7 +371,9 @@ xhr.send();
 
 
 
-## Additioanl Resources
+## Additional Resources
 
+  - [HTTP Crash Course - Traversy Media](https://www.youtube.com/watch?v=iYM2zFP3Zn0)
 
+  
 
