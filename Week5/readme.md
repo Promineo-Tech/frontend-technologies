@@ -413,14 +413,6 @@ Calling ```res.json()``` in our fetch is just a nice shorthand for saying "give 
   - [HTTP Crash Course - Traversy Media](https://www.youtube.com/watch?v=iYM2zFP3Zn0)
   - [Fetch API - MDN](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
   - [Promise object - MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
- 
-
-  - []()
   - [Async Crash Course - Traversy Media](https://www.youtube.com/watch?v=PoRJizFvM7s)
-  - []()
-  - []()
-  - []()
-  - []()
-  - []()
   
 
