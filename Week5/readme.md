@@ -235,11 +235,15 @@ A program is “concurrent” when it manages multiple activities with overlappi
 
 In contrast, a JavaScript program runs in a <strong>single</strong> thread. 
 
-In particular, once a function starts, it will run to completion before any other part of your program starts running. That is good. You know that no other code will corrupt the data that your function uses. No other code will try to read any of the data until after the function returns. Inside your function, you can modify the program’s variables to your heart’s content, as long as you clean up before the function returns. You never have to worry about mut or deadlocks.
+In particular, once a function starts, it will run to completion before any other part of your program starts running. You know that no other code will corrupt the data that your function uses. 
 
-The problem with having a single thread is obvious: If a program needs to wait for something to happen—most commonly, for data across the Internet—it cannot do anything else. Therefore, time-consuming operations in JavaScript are always asynchronous.
+The problem with having a single thread is obvious: If a program needs to wait for something to happen—most commonly, for data across the internet cannot do anything else. Therefore, time-consuming operations in JavaScript are always ```asynchronous```.
 
 You specify what you want, and provide <strong>callback functions</strong> that are invoked when data is available or when an error has occurred. The current function continues execution so that other work can be done.
+
+This "faking" is made possible with the event loop. When asynchronous operations are interpreted, they are not executed immediately. They are placed into an ```event queue``` and executed later. Those operations will be run as soon as they can (after the synchronous code has been run). 
+
+![Event Queue](images/event_queue.png)
 
 ## AJAX
 
@@ -305,10 +309,10 @@ There are many different response status codes, but here are a few of the most c
 
 AJAX relies on several technologies:
 
-- XMLHttpRequestObjects (XHR)
+- XMLHttpRequestObjects (XHR) - deprecated
 - A serialization format called JSON
 - Asynchronous Input / Output
-- Promises or Callbacks
+- Promises or Callbacks 
 - The event loop
 
 ### JavaScript XHR
@@ -350,14 +354,70 @@ This was the earliest code to perform AJAX requests. It was deprecated many, man
 
 ### Using jQuery to make an AJAX Call
 
-The jQuery ajax() method provides core functionality of Ajax in jQuery. It sends asynchronous HTTP requests to the server. The jQuery method abstracts over ``` XMLHttpRequest``` making it easier to use.
+The jQuery <a href="https://api.jquery.com/jquery.ajax/">ajax() method</a> provides core functionality of Ajax in jQuery. It sends asynchronous HTTP requests to the server. The jQuery method abstracts over ``` XMLHttpRequest``` making it easier to use.
 
+```JS
+$.ajax({
+  url: "https://fiddle.jshell.net/favicon.png",
+  beforeSend: function( xhr ) {
+    xhr.overrideMimeType( "text/plain; charset=x-user-defined" );
+  }
+})
+  .done(function( data ) {
+    if ( console && console.log ) {
+      console.log( "Sample of data:", data.slice( 0, 100 ) );
+    }
+  });
+```
 
+The disadvantages of using the ajax() or <a href="https://api.jquery.com/jquery.getjson/">getJson()</a> for GET requests is that it is tightly coupled to jQuery and is not a native library.
 
+### Using fetch
+
+The ```fetch()``` function is a new API for fetching resources. It's a global function, which means no creating new XHR objects or using outdated libraries like jQuery, and it vastly streamlines simple resource requests. 
+
+```JS
+fetch('https://api.github.com/repos/jquery/jquery/commits')
+  .then(res => res.json())
+  .then(json => console.log(json));
+```
+
+![HTTP-Messages](images/caniuse_fetch.png)
+
+### Promises and then
+
+In JavaScript, a ```Promise``` object represents a value that may not be available yet, but will be resolved at some point in the future. Essentially, the promise is an object that represents the result of an operation, whenever it occurs. This allows us to write more flexible asynchronous code than simply passing callback functions to asynchronous functions.
+
+All promises implement a ```then``` function that is called when the promise is fulfilled, or completed successfully. So this is very similar to the idea of a callback on success that we'd use with XMLHttpRequest or $.ajax.
+
+So in this code:
+
+```
+fetch('https://api.github.com/repos/jquery/jquery/commits')
+  .then(res => res.json())
+  .then(json => console.log(json));
+```
+
+the line ```then(res => res.json())``` is getting the response ```res``` from fetch and using the json method  to turn it into JSON. Then it's passing the JSON to the next line, ```then(json => console.log(json))```, to be handled by that function.
+
+#### res.json()
+
+The fetch API includes a mixin, or additional code, called <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch#body"Body</a>, which has functions that specialize in transforming the body of a request or response.
+
+Calling ```res.json()``` in our fetch is just a nice shorthand for saying "give me the body of the response parsed as JSON".
 
 ## Additional Resources
 
+  - [JS  event loop](https://www.youtube.com/watch?v=8aGhZQkoFbQ)
+  - [Another JS event loop resource](https://www.youtube.com/watch?v=WvTMIKHvPxU)
   - [HTTP Crash Course - Traversy Media](https://www.youtube.com/watch?v=iYM2zFP3Zn0)
-
+  - [Fetch API - MDN](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
+  - [Promise object - MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+  - [Async Crash Course - Traversy Media](https://www.youtube.com/watch?v=PoRJizFvM7s)
+  - []()
+  - []()
+  - []()
+  - []()
+  - []()
   
 
