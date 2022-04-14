@@ -288,9 +288,9 @@ GET tells the server what the request is trying to do - get a resource. The star
 
 ![HTTP-Messages](images/request_types.png)
 
-Notice the operations in the second column. These are known as “CRUD operations.” When folks refer to a CRUD app, they mean one that can create, read, update, and delete resources.
+These are known as “CRUD operations.” When folks refer to a CRUD app, they mean one that can create, read, update, and delete resources.
 
-These 4 are not the only HTTP methods, but they’re the most important ones for you to know about right now.
+These 4 are not the only <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods">HTTP methods</a>, but they’re the most important ones for you to know about right now.
 
 ### Response Messages
 
