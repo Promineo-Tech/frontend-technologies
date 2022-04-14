@@ -296,7 +296,7 @@ These 4 are not the only <a href="https://developer.mozilla.org/en-US/docs/Web/H
 
  The start-line in the response says HTTP/1.1 200. The first half of this line (HTTP/1.1) tells the client that the response follows HTTP rules, version 1.1. The second half (200) is the HTTP status code, which tells us the status of our request. The 200 code in this example tells us that the request was successful. Not all requests succeed though, and the status codes can help us understand what went wrong.
 
-There are many different response status codes, but here are a few of the most common:
+There are many different <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status">response status codes</a>, but here are a few of the most common:
 
 - 200 OK - The request succeeded
 - 201 Created - The request succeeded and a resource was created
@@ -407,11 +407,15 @@ Calling ```res.json()``` in our fetch is just a nice shorthand for saying "give 
 
 ## Additional Resources
 
+  - [AJAX Overview - MDN (ignore implementation details)](https://developer.mozilla.org/en-US/docs/Web/Guide/AJAX)
   - [JS  event loop](https://www.youtube.com/watch?v=8aGhZQkoFbQ)
   - [Another JS event loop resource](https://www.youtube.com/watch?v=WvTMIKHvPxU)
   - [HTTP Crash Course - Traversy Media](https://www.youtube.com/watch?v=iYM2zFP3Zn0)
   - [Fetch API - MDN](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
   - [Promise object - MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+ 
+
+  - []()
   - [Async Crash Course - Traversy Media](https://www.youtube.com/watch?v=PoRJizFvM7s)
   - []()
   - []()
