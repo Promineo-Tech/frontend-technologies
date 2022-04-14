@@ -412,7 +412,7 @@ Calling ```res.json()``` in our fetch is just a nice shorthand for saying "give 
   - [Another JS event loop resource](https://www.youtube.com/watch?v=WvTMIKHvPxU)
   - [HTTP Crash Course - Traversy Media](https://www.youtube.com/watch?v=iYM2zFP3Zn0)
   - [Fetch API - MDN](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
-  - [Using Fetch API](https://www.youtube.com/watch?v=cuEtnrL9-H0)
+  - [Using Fetch API Tutorial](https://www.youtube.com/watch?v=cuEtnrL9-H0)
   - [Promise object - MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
   - [Async Crash Course - Traversy Media](https://www.youtube.com/watch?v=PoRJizFvM7s)
   - [Asynchronous Playlist - Net Ninja](https://www.youtube.com/watch?v=ZcQyJ-gxke0&list=PL4cUxeGkcC9jx2TTZk3IGWKSbtugYdrlu)
