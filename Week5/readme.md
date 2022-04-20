@@ -400,7 +400,7 @@ the line ```then(res => res.json())``` is getting the response ```res``` from fe
 
 #### res.json()
 
-The fetch API includes a mixin, or additional code, called <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch#body"Body</a>, which has functions that specialize in transforming the body of a request or response.
+The fetch API includes a mixin, or additional code, called <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch#body">Body</a>, which has functions that specialize in transforming the body of a request or response.
 
 Calling ```res.json()``` in our fetch is just a nice shorthand for saying "give me the body of the response parsed as JSON".
 
