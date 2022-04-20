@@ -218,12 +218,11 @@ a certain order:
 
 1. The browser parses the URL
 2. The browser sends the domain name to the ISP
-3. The ISP looks up the IP address in the DNS
-4. The ISP sends the IP address back to the browser
-5. The browser opens a connection to the server located at the IP address
-6. The browser sends a request to the server
-7. The server sends a response
-8. Repeat steps 6 and 7 until the browser has all of the resources it needs
+3. The ISP finds the IP and sends it back to the browser
+4. The browser opens a connection to the server located at the IP address
+5. The browser sends a request to the server
+6. The server sends a response
+7. Repeat steps 6 and 7 until the browser has all of the resources it needs
 
 ![Response-Request](images/request_response.png)
 ![URL](images/url.png)
